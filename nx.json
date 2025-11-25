@@ -9,7 +9,8 @@
   },
   "projects": {
     "total-angular-e2e": {
-      "tags": []
+      "tags": [],
+      "implicitDependencies": ["total-angular"]
     },
     "total-angular": {
       "tags": []
