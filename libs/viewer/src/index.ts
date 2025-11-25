@@ -3,3 +3,6 @@ export * from './lib/viewer-app.component';
 export * from './lib/viewer.service';
 export * from './lib/viewer-config.service';
 export * from './lib/translation/viewer-translate.loader';
+export * from './lib/run-presentation/run-presentation.component';
+export * from './lib/excel-document/excel-document.component';
+export * from './lib/excel-page/excel-page.component';
