@@ -27,9 +27,7 @@
               "apps/total-angular/src/favicon.ico",
               "apps/total-angular/src/assets"
             ],
-            "styles": [
-              "apps/total-angular/src/styles.less"
-            ],
+            "styles": ["apps/total-angular/src/styles.less"],
             "scripts": []
           },
           "configurations": {
@@ -87,10 +85,7 @@
               "apps/total-angular/tsconfig.app.json",
               "apps/total-angular/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**/*",
-              "!apps/total-angular/**"
-            ]
+            "exclude": ["**/node_modules/**/*", "!apps/total-angular/**/*"]
           }
         },
         "test": {
@@ -129,10 +124,7 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "apps/total-angular-e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**/*",
-              "!apps/total-angular-e2e/**"
-            ]
+            "exclude": ["**/node_modules/**/*", "!apps/total-angular-e2e/**/*"]
           }
         }
       }
@@ -148,13 +140,13 @@
           "options": {
             "tsConfig": "libs/viewer/tsconfig.lib.json",
             "project": "libs/viewer/ng-package.json"
-          }
-        ,          "configurations": {
+          },
+          "configurations": {
             "production": {
               "tsConfig": "libs/viewer/tsconfig.lib.prod.json"
             }
           }
-},
+        },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
@@ -162,10 +154,7 @@
               "libs/viewer/tsconfig.lib.json",
               "libs/viewer/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**/*",
-              "!libs/viewer/**"
-            ]
+            "exclude": ["**/node_modules/**/*", "!libs/viewer/**/*"]
           }
         },
         "test": {
@@ -194,13 +183,13 @@
           "options": {
             "tsConfig": "libs/common-components/tsconfig.lib.json",
             "project": "libs/common-components/ng-package.json"
-          }
-        ,          "configurations": {
+          },
+          "configurations": {
             "production": {
               "tsConfig": "libs/common-components/tsconfig.lib.prod.json"
             }
           }
-},
+        },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
@@ -208,10 +197,7 @@
               "libs/common-components/tsconfig.lib.json",
               "libs/common-components/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**/*",
-              "!libs/common-components/**"
-            ]
+            "exclude": ["**/node_modules/**/*", "!libs/common-components/**/*"]
           }
         },
         "test": {
@@ -240,13 +226,13 @@
           "options": {
             "tsConfig": "libs/annotation/tsconfig.lib.json",
             "project": "libs/annotation/ng-package.json"
-          }
-        ,          "configurations": {
+          },
+          "configurations": {
             "production": {
               "tsConfig": "libs/annotation/tsconfig.lib.prod.json"
             }
           }
-},
+        },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
@@ -254,10 +240,7 @@
               "libs/annotation/tsconfig.lib.json",
               "libs/annotation/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/annotation/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/annotation/**/*"]
           }
         },
         "test": {

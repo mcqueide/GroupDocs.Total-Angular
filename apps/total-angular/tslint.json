@@ -1,17 +1,10 @@
 {
   "extends": "../../tslint.json",
   "rules": {
-    "directive-selector": [
-      true,
-      "attribute",
-      "gd-total",
-      "camelCase"
-    ],
-    "component-selector": [
-      true,
-      "element",
-      "gd-total",
-      "kebab-case"
-    ]
+    "directive-selector": [true, "attribute", "gd-total", "camelCase"],
+    "component-selector": [true, "element", "gd-total", "kebab-case"]
+  },
+  "linterOptions": {
+    "exclude": ["!**/*"]
   }
 }
