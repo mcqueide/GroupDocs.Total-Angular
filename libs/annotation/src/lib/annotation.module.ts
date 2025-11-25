@@ -79,7 +79,7 @@ export class AnnotationModule {
     library.add(fas, far);
   }
 
-  static forRoot(annotationApiEndpoint: string): ModuleWithProviders {
+  static forRoot(annotationApiEndpoint: string): ModuleWithProviders<AnnotationModule> {
     Api.ANNOTATION_DEFAULT_API_ENDPOINT = annotationApiEndpoint;
     return {
       ngModule: AnnotationModule

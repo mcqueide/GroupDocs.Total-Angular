@@ -77,7 +77,7 @@ export class ViewerAppComponent implements OnInit, OnDestroy, AfterViewInit {
   _searchTermFromGetQuery = false;
 
   _searchElement: SearchComponent;
-  @ViewChild('search', { static: false })
+  @ViewChild('search')
   set content(content: SearchComponent) {
     if (content) {
       this._searchElement = content;
