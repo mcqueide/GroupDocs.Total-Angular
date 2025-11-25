@@ -70,8 +70,7 @@ export function setupLoadingInterceptor(service: LoadingMaskService) {
         multi: true,
         deps: [LoadingMaskService]
       }
-    ],
-  entryComponents: [AnnotationComponent],
+    ]
 })
 
 export class AnnotationModule {
