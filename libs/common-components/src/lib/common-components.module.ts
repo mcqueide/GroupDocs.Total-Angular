@@ -5,8 +5,7 @@ import {SidePanelComponent} from './side-panel/side-panel.component';
 import {ButtonComponent} from './button/button.component';
 import {LogoComponent} from './logo/logo.component';
 import {TooltipComponent} from './tooltip/tooltip.component';
-import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
-import {library} from '@fortawesome/fontawesome-svg-core';
+import {FontAwesomeModule,FaIconLibrary} from '@fortawesome/angular-fontawesome';
 import {fas} from '@fortawesome/free-solid-svg-icons';
 import {far} from '@fortawesome/free-regular-svg-icons';
 import {Api, ConfigService,} from "./config.service";
@@ -221,7 +220,8 @@ const providers = [ConfigService,
   providers: providers
 })
 export class CommonComponentsModule {
-  constructor() {
-    library.add(fas, far);
+  constructor(library: FaIconLibrary) {
+    // Add all solid and regular icons
+    library.addIconPacks(fas, far);
   }
 }

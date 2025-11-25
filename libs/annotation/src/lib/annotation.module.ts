@@ -11,7 +11,7 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 import {ClickOutsideModule} from "ng-click-outside";
 import {AnnotationAppComponent} from './annotation-app.component';
-import {library} from "@fortawesome/fontawesome-svg-core";
+import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import {fas} from "@fortawesome/free-solid-svg-icons";
 import {far} from "@fortawesome/free-regular-svg-icons";
 import {AnnotationComponent} from './annotation/annotation.component';
@@ -75,8 +75,8 @@ export function setupLoadingInterceptor(service: LoadingMaskService) {
 })
 
 export class AnnotationModule {
-  constructor() {
-    library.add(fas, far);
+  constructor(library: FaIconLibrary) {
+    library.addIconPacks(fas, far);
   }
 
   static forRoot(annotationApiEndpoint: string): ModuleWithProviders<AnnotationModule> {

@@ -18,6 +18,10 @@ import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {RunPresentationComponent} from './run-presentation/run-presentation.component';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {ViewerTranslateLoader} from './translation/viewer-translate.loader';
+import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { far } from '@fortawesome/free-regular-svg-icons';
+
 
 export function initializeApp(viewerConfigService: ViewerConfigService) {
   const result = () => viewerConfigService.load();
@@ -84,6 +88,10 @@ export function translateLoaderFactory() {
   ]
 })
 export class ViewerModule {
+  constructor(library: FaIconLibrary) {
+    library.addIconPacks(fas, far);
+  }
+  
   static forRoot(viewerApiEndpoint : string): ModuleWithProviders<ViewerModule> {
     Api.VIEWER_DEFAULT_API_ENDPOINT = viewerApiEndpoint
     return {
