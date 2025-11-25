@@ -18,31 +18,10 @@
     "viewer": {
       "tags": []
     },
-    "search": {
-      "tags": []
-    },
     "common-components": {
       "tags": []
     },
-    "editor": {
-      "tags": []
-    },
-    "comparison": {
-      "tags": []
-    },
-    "conversion": {
-      "tags": []
-    },
-    "signature": {
-      "tags": []
-    },
     "annotation": {
-      "tags": []
-    },
-    "metadata": {
-      "tags": []
-    },
-    "parser": {
       "tags": []
     }
   },
