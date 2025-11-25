@@ -7,14 +7,14 @@
     "access": "public"
   },
   "peerDependencies": {
-    "@angular/common": "^8.0.0",
-    "@angular/core": "^8.0.0"
+    "@angular/common": "^9.1.13",
+    "@angular/core": "^9.1.13"
   },
   "dependencies": {
-    "@fortawesome/angular-fontawesome": "^0.4.0",
-    "@fortawesome/fontawesome-svg-core": "^1.2.19",
-    "@fortawesome/free-regular-svg-icons": "^5.9.0",
-    "@fortawesome/free-solid-svg-icons": "^5.9.0",
+    "@fortawesome/angular-fontawesome": "^0.6.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.25",
+    "@fortawesome/free-regular-svg-icons": "^5.11.2",
+    "@fortawesome/free-solid-svg-icons": "^5.11.2",
     "@ngx-translate/core": "^12.1.2",
     "ng-click-outside": "^5.1.1",
     "hammerjs": "^2.0.8",
