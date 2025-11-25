@@ -20,7 +20,7 @@ export class ViewerConfigService {
 
   load() {
     return new Promise<void>((resolve, reject) => {
-      const configEndpoint = this._config.getConfigEndpoint(Api.VIEWER_APP);
+      const configEndpoint = this._config.getViewerConfigEndpoint(Api.VIEWER_APP);
       this._http.get(configEndpoint, Api.httpOptionsJson).toPromise().then((response: ViewerConfig) => {
         const viewerConfig = <ViewerConfig>response;
         this._viewerConfig.next(viewerConfig);

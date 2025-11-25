@@ -21,7 +21,7 @@ export class AnnotationConfigService {
 
   load() {
     return new Promise<void>((resolve, reject) => {
-      const configEndpoint = this._config.getConfigEndpoint(Api.ANNOTATION_APP);
+      const configEndpoint = this._config.getAnnotationConfigEndpoint(Api.ANNOTATION_APP);
       this._http.get(configEndpoint, Api.httpOptionsJson).toPromise().then((response: AnnotationConfig) => {
         const annotationConfig = <AnnotationConfig>response;
         this._annotationConfig.next(annotationConfig);

@@ -11,7 +11,8 @@ export class Api {
   public static CONVERSION_APP = '/conversion';
   public static METADATA_APP = '/metadata';
   public static PARSER_APP = '/parser';
-  public static DEFAULT_API_ENDPOINT = window.location.protocol + "//" + window.location.host + window.location.pathname;
+  public static VIEWER_DEFAULT_API_ENDPOINT = window.location.protocol + "//" + window.location.host + window.location.pathname;
+  public static ANNOTATION_DEFAULT_API_ENDPOINT = window.location.protocol + "//" + window.location.host + window.location.pathname;
   public static LOAD_FILE_TREE = '/loadFileTree';
   public static LOAD_CONFIG = '/loadConfig';
   public static LOAD_DOCUMENT_DESCRIPTION = '/loadDocumentDescription';
@@ -65,57 +66,43 @@ export class Api {
 @Injectable()
 export class ConfigService {
 
-  private _apiEndpoint: string;
+  private _viewerApiEndpoint: string;
+  private _annotationApiEndpoint: string;
 
   constructor() {
-    this.apiEndpoint = Api.DEFAULT_API_ENDPOINT;
+    this.viewerApiEndpoint = Api.VIEWER_DEFAULT_API_ENDPOINT;
+    this.annotationApiEndpoint = Api.ANNOTATION_DEFAULT_API_ENDPOINT;
   }
 
-  set apiEndpoint(url: string) {
-    this._apiEndpoint = url && url.trim().endsWith('/') ? url.substring(0, url.length - 1) : url;
+  set viewerApiEndpoint(url: string) {
+    this._viewerApiEndpoint = url && url.trim().endsWith('/') ? url.substring(0, url.length - 1) : url;
+  }
+  set annotationApiEndpoint(url: string) {
+    this._annotationApiEndpoint = url && url.trim().endsWith('/') ? url.substring(0, url.length - 1) : url;
   }
 
-  getConfigEndpoint(app) {
-    return (this.apiEndpoint.endsWith(app) ? this.apiEndpoint : this.apiEndpoint + app) + Api.LOAD_CONFIG;
+  get viewerApiEndpoint() {
+    return this._viewerApiEndpoint;
+  }
+
+  get annotationApiEndpoint() {
+    return this._annotationApiEndpoint;
+  }
+
+  getViewerConfigEndpoint(app) {
+    return (this.viewerApiEndpoint.endsWith(app) ? this.viewerApiEndpoint : this.viewerApiEndpoint + app) + Api.LOAD_CONFIG;
+  }
+
+  getAnnotationConfigEndpoint(app) {
+    return (this.annotationApiEndpoint.endsWith(app) ? this.annotationApiEndpoint : this.annotationApiEndpoint + app) + Api.LOAD_CONFIG;
   }
 
   getViewerApiEndpoint() {
-    return this._apiEndpoint.endsWith(Api.VIEWER_APP) ? this._apiEndpoint : this._apiEndpoint + Api.VIEWER_APP;
-  }
-
-  getEditorApiEndpoint() {
-    return this._apiEndpoint.trim().endsWith(Api.EDITOR_APP) ? this._apiEndpoint : this._apiEndpoint + Api.EDITOR_APP;
-  }
-
-  getComparisonApiEndpoint() {
-    return this._apiEndpoint.trim().endsWith(Api.COMPARISON_APP) ? this._apiEndpoint : this._apiEndpoint + Api.COMPARISON_APP;
-  }
-
-  getConversionApiEndpoint() {
-    return this._apiEndpoint.trim().endsWith(Api.CONVERSION_APP) ? this._apiEndpoint : this._apiEndpoint + Api.CONVERSION_APP;
-  }
-
-  getMetadataApiEndpoint() {
-    return this._apiEndpoint.trim().endsWith(Api.METADATA_APP) ? this._apiEndpoint : this._apiEndpoint + Api.METADATA_APP;
-  }
-
-  get apiEndpoint() {
-    return this._apiEndpoint;
-  }
-
-  getSignatureApiEndpoint() {
-    return this._apiEndpoint.endsWith(Api.SIGNATURE_APP) ? this._apiEndpoint : this._apiEndpoint + Api.SIGNATURE_APP;
+    return this._viewerApiEndpoint.endsWith(Api.VIEWER_APP) ? this._viewerApiEndpoint : this._viewerApiEndpoint + Api.VIEWER_APP;
   }
 
   getAnnotationApiEndpoint() {
-    return this._apiEndpoint.endsWith(Api.ANNOTATION_APP) ? this._apiEndpoint : this._apiEndpoint + Api.ANNOTATION_APP;
+    return this._annotationApiEndpoint.endsWith(Api.ANNOTATION_APP) ? this._annotationApiEndpoint : this._annotationApiEndpoint + Api.ANNOTATION_APP;
   }
 
-  getSearchApiEndpoint() {
-    return this._apiEndpoint.endsWith(Api.SEARCH_APP) ? this._apiEndpoint : this._apiEndpoint + Api.SEARCH_APP;
-  }
-
-  getParserApiEndpoint() {
-    return this._apiEndpoint.endsWith(Api.PARSER_APP) ? this._apiEndpoint : this._apiEndpoint + Api.PARSER_APP;
-  }
 }

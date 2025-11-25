@@ -84,8 +84,8 @@ export function translateLoaderFactory() {
   ]
 })
 export class ViewerModule {
-  static forRoot(apiEndpoint : string): ModuleWithProviders {
-    Api.DEFAULT_API_ENDPOINT = apiEndpoint
+  static forRoot(viewerApiEndpoint : string): ModuleWithProviders {
+    Api.VIEWER_DEFAULT_API_ENDPOINT = viewerApiEndpoint
     return {
       ngModule: ViewerModule
     };
