@@ -39,7 +39,7 @@ const $ = jquery;
 export class AnnotationAppComponent implements OnInit {
   title = 'annotation';
   files: FileModel[] = [];
-  file: FileAnnotationDescription;
+  file: FileAnnotationDescription = null;
   isLoading: boolean;
   annotationConfig: AnnotationConfig;
   browseFilesModal = CommonModals.BrowseFiles;
