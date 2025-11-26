@@ -7,7 +7,7 @@ import {
   ErrorInterceptorService, LoadingMaskInterceptorService, LoadingMaskService
 } from "@groupdocs.examples.angular/common-components";
 import {AnnotationConfigService} from "./annotation-config.service";
-import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
+import { HTTP_INTERCEPTORS, provideHttpClient, withInterceptorsFromDi } from "@angular/common/http";
 import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 import {ClickOutsideModule} from "ng-click-outside";
 import {AnnotationAppComponent} from './annotation-app.component';
@@ -34,44 +34,37 @@ export function setupLoadingInterceptor(service: LoadingMaskService) {
   return new LoadingMaskInterceptorService(service);
 }
 
-@NgModule({
-  declarations: [AnnotationAppComponent, AnnotationComponent, CommentPanelComponent, CommentComponent, CreateCommentComponent,
-  ],
-  exports: [CommonComponentsModule, AnnotationAppComponent, AnnotationComponent, CommentPanelComponent, CommentComponent, CreateCommentComponent],
-  imports:
-    [CommonModule,
-      CommonComponentsModule,
-      HttpClientModule,
-      FontAwesomeModule,
-      ClickOutsideModule,
-      TranslateModule.forRoot()
+@NgModule({ declarations: [AnnotationAppComponent, AnnotationComponent, CommentPanelComponent, CommentComponent, CreateCommentComponent,
     ],
-  providers:
-    [
-      ConfigService,
-      AnnotationConfigService,
-      ActiveAnnotationService,
-      RemoveAnnotationService,
-      CommentAnnotationService,
-      {
-        provide: HTTP_INTERCEPTORS,
-        useClass: ErrorInterceptorService,
-        multi: true
-      },
-      {
-        provide: APP_INITIALIZER,
-        useFactory: initializeApp,
-        deps: [AnnotationConfigService], multi: true
-      },
-      LoadingMaskService,
-      {
-        provide: HTTP_INTERCEPTORS,
-        useFactory: setupLoadingInterceptor,
-        multi: true,
-        deps: [LoadingMaskService]
-      }
-    ]
-})
+    exports: [CommonComponentsModule, AnnotationAppComponent, AnnotationComponent, CommentPanelComponent, CommentComponent, CreateCommentComponent], imports: [CommonModule,
+        CommonComponentsModule,
+        FontAwesomeModule,
+        ClickOutsideModule,
+        TranslateModule.forRoot()], providers: [
+        ConfigService,
+        AnnotationConfigService,
+        ActiveAnnotationService,
+        RemoveAnnotationService,
+        CommentAnnotationService,
+        {
+            provide: HTTP_INTERCEPTORS,
+            useClass: ErrorInterceptorService,
+            multi: true
+        },
+        {
+            provide: APP_INITIALIZER,
+            useFactory: initializeApp,
+            deps: [AnnotationConfigService], multi: true
+        },
+        LoadingMaskService,
+        {
+            provide: HTTP_INTERCEPTORS,
+            useFactory: setupLoadingInterceptor,
+            multi: true,
+            deps: [LoadingMaskService]
+        },
+        provideHttpClient(withInterceptorsFromDi())
+    ] })
 
 export class AnnotationModule {
   constructor(library: FaIconLibrary) {

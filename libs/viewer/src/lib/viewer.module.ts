@@ -1,6 +1,6 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {APP_INITIALIZER, ModuleWithProviders, NgModule} from '@angular/core';
-import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
+import { HTTP_INTERCEPTORS, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import {ViewerAppComponent} from './viewer-app.component';
 import {
   Api,
@@ -39,54 +39,49 @@ export function translateLoaderFactory() {
   return new ViewerTranslateLoader();
 }
 
-@NgModule({
-  declarations: [
-    ViewerAppComponent,
-    RunPresentationComponent,
-    ExcelDocumentComponent,
-    ExcelPageComponent],
-  imports: [
-    BrowserModule,
-    CommonComponentsModule,
-    HttpClientModule,
-    FontAwesomeModule,
-    TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: translateLoaderFactory
-      }
-    })
-  ],
-  exports : [
-    ViewerAppComponent,
-    RunPresentationComponent,
-    ExcelDocumentComponent,
-    ExcelPageComponent,
-    CommonComponentsModule
-  ],
-  providers: [
-    ViewerService,
-    ConfigService,
-    ViewerConfigService,
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: ErrorInterceptorService,
-      multi: true
-    },
-    {
-      provide: APP_INITIALIZER,
-      useFactory: initializeApp,
-      deps: [ViewerConfigService], multi: true
-    },
-    LoadingMaskService,
-    {
-      provide: HTTP_INTERCEPTORS,
-      useFactory: setupLoadingInterceptor,
-      multi: true,
-      deps: [LoadingMaskService]
-    }
-  ]
-})
+@NgModule({ declarations: [
+        ViewerAppComponent,
+        RunPresentationComponent,
+        ExcelDocumentComponent,
+        ExcelPageComponent
+    ],
+    exports: [
+        ViewerAppComponent,
+        RunPresentationComponent,
+        ExcelDocumentComponent,
+        ExcelPageComponent,
+        CommonComponentsModule
+    ], imports: [BrowserModule,
+        CommonComponentsModule,
+        FontAwesomeModule,
+        TranslateModule.forRoot({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: translateLoaderFactory
+            }
+        })], providers: [
+        ViewerService,
+        ConfigService,
+        ViewerConfigService,
+        {
+            provide: HTTP_INTERCEPTORS,
+            useClass: ErrorInterceptorService,
+            multi: true
+        },
+        {
+            provide: APP_INITIALIZER,
+            useFactory: initializeApp,
+            deps: [ViewerConfigService], multi: true
+        },
+        LoadingMaskService,
+        {
+            provide: HTTP_INTERCEPTORS,
+            useFactory: setupLoadingInterceptor,
+            multi: true,
+            deps: [LoadingMaskService]
+        },
+        provideHttpClient(withInterceptorsFromDi())
+    ] })
 export class ViewerModule {
   constructor(library: FaIconLibrary) {
     library.addIconPacks(fas, far);

@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import { HttpClient } from "@angular/common/http";
 import {Api, ConfigService, FileCredentials, FileUtil} from "@groupdocs.examples.angular/common-components";
 
 @Injectable({

@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {ViewerConfig} from "./viewer-config";
 import {Api, ConfigService} from "@groupdocs.examples.angular/common-components";
-import {HttpClient} from "@angular/common/http";
+import { HttpClient } from "@angular/common/http";
 import {BehaviorSubject, Observable} from "rxjs";
 
 @Injectable({
