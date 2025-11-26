@@ -5,7 +5,7 @@
        alt=""
        *ngIf="data && !isHtml">
   <div class="gd-page-spinner" *ngIf="!data">
-    <fa-icon [icon]="['fas','circle-notch']" [spin]="true"></fa-icon>
+    <fa-icon [icon]="['fas','circle-notch']" [animation]="'spin'"></fa-icon>
     &nbsp;{{'Loading... Please wait.' | translate}}
   </div>
 </div>
