@@ -7,29 +7,17 @@
     "tslint.json": "*",
     "nx.json": "*"
   },
-  "projects": {
-    "annotation": {
-      "tags": []
-    },
-    "common-components": {
-      "tags": []
-    },
-    "total-angular": {
-      "tags": []
-    },
-    "total-angular-e2e": {
-      "tags": [],
-      "implicitDependencies": ["total-angular"]
-    },
-    "viewer": {
-      "tags": []
-    }
-  },
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
       "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e"
+        ],
+        "parallel": 1
       }
     }
   },
@@ -40,5 +28,24 @@
         "projects": "dependencies"
       }
     ]
+  },
+  "affected": {
+    "defaultBase": "master"
+  },
+  "cli": {
+    "warnings": {
+      "versionMismatch": false
+    },
+    "defaultCollection": "@nrwl/angular"
+  },
+  "defaultProject": "total-angular",
+  "generators": {
+    "@nrwl/angular:application": {
+      "unitTestRunner": "karma",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "unitTestRunner": "karma"
+    }
   }
 }

@@ -1,7 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
-  "newProjectRoot": "",
   "projects": {
     "annotation": {
       "projectType": "library",
@@ -28,7 +27,10 @@
               "libs/annotation/tsconfig.lib.json",
               "libs/annotation/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/annotation/**/*"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/annotation/**/*"
+            ]
           }
         },
         "test": {
@@ -38,14 +40,17 @@
             "tsConfig": "libs/annotation/tsconfig.spec.json",
             "karmaConfig": "libs/annotation/karma.conf.js"
           },
-          "outputs": ["coverage/libs/annotation"]
+          "outputs": [
+            "coverage/libs/annotation"
+          ]
         }
       },
       "schematics": {
         "@nrwl/angular:component": {
           "styleext": "less"
         }
-      }
+      },
+      "tags": []
     },
     "common-components": {
       "projectType": "library",
@@ -72,7 +77,10 @@
               "libs/common-components/tsconfig.lib.json",
               "libs/common-components/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**/*", "!libs/common-components/**/*"]
+            "exclude": [
+              "**/node_modules/**/*",
+              "!libs/common-components/**/*"
+            ]
           }
         },
         "test": {
@@ -82,14 +90,17 @@
             "tsConfig": "libs/common-components/tsconfig.spec.json",
             "karmaConfig": "libs/common-components/karma.conf.js"
           },
-          "outputs": ["coverage/libs/common-components"]
+          "outputs": [
+            "coverage/libs/common-components"
+          ]
         }
       },
       "schematics": {
         "@nrwl/angular:component": {
           "styleext": "less"
         }
-      }
+      },
+      "tags": []
     },
     "total-angular": {
       "projectType": "application",
@@ -114,7 +125,9 @@
               "apps/total-angular/src/favicon.ico",
               "apps/total-angular/src/assets"
             ],
-            "styles": ["apps/total-angular/src/styles.less"],
+            "styles": [
+              "apps/total-angular/src/styles.less"
+            ],
             "scripts": [],
             "vendorChunk": true,
             "extractLicenses": false,
@@ -151,7 +164,9 @@
               ]
             }
           },
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "defaultConfiguration": ""
         },
         "serve": {
@@ -178,7 +193,10 @@
               "apps/total-angular/tsconfig.app.json",
               "apps/total-angular/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**/*", "!apps/total-angular/**/*"]
+            "exclude": [
+              "**/node_modules/**/*",
+              "!apps/total-angular/**/*"
+            ]
           }
         },
         "test": {
@@ -192,9 +210,12 @@
             "scripts": [],
             "assets": []
           },
-          "outputs": ["coverage/apps/total-angular"]
+          "outputs": [
+            "coverage/apps/total-angular"
+          ]
         }
-      }
+      },
+      "tags": []
     },
     "total-angular-e2e": {
       "root": "apps/total-angular-e2e",
@@ -218,10 +239,17 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "apps/total-angular-e2e/tsconfig.e2e.json",
-            "exclude": ["**/node_modules/**/*", "!apps/total-angular-e2e/**/*"]
+            "exclude": [
+              "**/node_modules/**/*",
+              "!apps/total-angular-e2e/**/*"
+            ]
           }
         }
-      }
+      },
+      "tags": [],
+      "implicitDependencies": [
+        "total-angular"
+      ]
     },
     "viewer": {
       "projectType": "library",
@@ -248,7 +276,10 @@
               "libs/viewer/tsconfig.lib.json",
               "libs/viewer/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**/*", "!libs/viewer/**/*"]
+            "exclude": [
+              "**/node_modules/**/*",
+              "!libs/viewer/**/*"
+            ]
           }
         },
         "test": {
@@ -258,30 +289,17 @@
             "tsConfig": "libs/viewer/tsconfig.spec.json",
             "karmaConfig": "libs/viewer/karma.conf.js"
           },
-          "outputs": ["coverage/libs/viewer"]
+          "outputs": [
+            "coverage/libs/viewer"
+          ]
         }
       },
       "schematics": {
         "@nrwl/angular:component": {
           "styleext": "less"
         }
-      }
+      },
+      "tags": []
     }
-  },
-  "cli": {
-    "warnings": {
-      "versionMismatch": false
-    },
-    "defaultCollection": "@nrwl/angular"
-  },
-  "schematics": {
-    "@nrwl/angular:application": {
-      "unitTestRunner": "karma",
-      "e2eTestRunner": "cypress"
-    },
-    "@nrwl/angular:library": {
-      "unitTestRunner": "karma"
-    }
-  },
-  "defaultProject": "total-angular"
+  }
 }
