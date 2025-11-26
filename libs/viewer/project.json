@@ -1,0 +1,46 @@
+{
+  "name": "viewer",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/viewer/src",
+  "prefix": "gd",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:ng-packagr",
+      "options": {
+        "tsConfig": "libs/viewer/tsconfig.lib.json",
+        "project": "libs/viewer/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/viewer/tsconfig.lib.prod.json"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@angular-devkit/build-angular:tslint",
+      "options": {
+        "tsConfig": [
+          "libs/viewer/tsconfig.lib.json",
+          "libs/viewer/tsconfig.spec.json"
+        ],
+        "exclude": ["**/node_modules/**/*", "!libs/viewer/**/*"]
+      }
+    },
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/viewer/src/test.ts",
+        "tsConfig": "libs/viewer/tsconfig.spec.json",
+        "karmaConfig": "libs/viewer/karma.conf.js"
+      },
+      "outputs": ["{workspaceRoot}/coverage/libs/viewer"]
+    }
+  },
+  "generators": {
+    "@nrwl/angular:component": {
+      "styleext": "less"
+    }
+  },
+  "tags": []
+}

@@ -1,0 +1,46 @@
+{
+  "name": "annotation",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/annotation/src",
+  "prefix": "gd",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:ng-packagr",
+      "options": {
+        "tsConfig": "libs/annotation/tsconfig.lib.json",
+        "project": "libs/annotation/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/annotation/tsconfig.lib.prod.json"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@angular-devkit/build-angular:tslint",
+      "options": {
+        "tsConfig": [
+          "libs/annotation/tsconfig.lib.json",
+          "libs/annotation/tsconfig.spec.json"
+        ],
+        "exclude": ["**/node_modules/**", "!libs/annotation/**/*"]
+      }
+    },
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/annotation/src/test.ts",
+        "tsConfig": "libs/annotation/tsconfig.spec.json",
+        "karmaConfig": "libs/annotation/karma.conf.js"
+      },
+      "outputs": ["{workspaceRoot}/coverage/libs/annotation"]
+    }
+  },
+  "generators": {
+    "@nrwl/angular:component": {
+      "styleext": "less"
+    }
+  },
+  "tags": []
+}

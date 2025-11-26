@@ -1,0 +1,107 @@
+{
+  "name": "total-angular",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "generators": {
+    "@nrwl/workspace:component": {
+      "style": "less"
+    }
+  },
+  "sourceRoot": "apps/total-angular/src",
+  "prefix": "total-angular",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "options": {
+        "outputPath": "dist/apps/total-angular",
+        "index": "apps/total-angular/src/index.html",
+        "main": "apps/total-angular/src/main.ts",
+        "polyfills": "apps/total-angular/src/polyfills.ts",
+        "tsConfig": "apps/total-angular/tsconfig.app.json",
+        "assets": [
+          "apps/total-angular/src/favicon.ico",
+          "apps/total-angular/src/assets"
+        ],
+        "styles": ["apps/total-angular/src/styles.less"],
+        "scripts": [],
+        "vendorChunk": true,
+        "extractLicenses": false,
+        "buildOptimizer": false,
+        "sourceMap": true,
+        "optimization": false,
+        "namedChunks": true
+      },
+      "configurations": {
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/total-angular/src/environments/environment.ts",
+              "with": "apps/total-angular/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false,
+          "buildOptimizer": true,
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "2mb",
+              "maximumError": "5mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "6kb"
+            }
+          ]
+        }
+      },
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": ""
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "options": {
+        "browserTarget": "total-angular:build"
+      },
+      "configurations": {
+        "production": {
+          "browserTarget": "total-angular:build:production"
+        }
+      }
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "total-angular:build"
+      }
+    },
+    "lint": {
+      "executor": "@angular-devkit/build-angular:tslint",
+      "options": {
+        "tsConfig": [
+          "apps/total-angular/tsconfig.app.json",
+          "apps/total-angular/tsconfig.spec.json"
+        ],
+        "exclude": ["**/node_modules/**/*", "!apps/total-angular/**/*"]
+      }
+    },
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "apps/total-angular/src/test.ts",
+        "tsConfig": "apps/total-angular/tsconfig.spec.json",
+        "karmaConfig": "apps/total-angular/karma.conf.js",
+        "polyfills": "apps/total-angular/src/polyfills.ts",
+        "styles": [],
+        "scripts": [],
+        "assets": []
+      },
+      "outputs": ["{workspaceRoot}/coverage/apps/total-angular"]
+    }
+  },
+  "tags": []
+}

@@ -1,0 +1,46 @@
+{
+  "name": "common-components",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/common-components/src",
+  "prefix": "gd",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:ng-packagr",
+      "options": {
+        "tsConfig": "libs/common-components/tsconfig.lib.json",
+        "project": "libs/common-components/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/common-components/tsconfig.lib.prod.json"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@angular-devkit/build-angular:tslint",
+      "options": {
+        "tsConfig": [
+          "libs/common-components/tsconfig.lib.json",
+          "libs/common-components/tsconfig.spec.json"
+        ],
+        "exclude": ["**/node_modules/**/*", "!libs/common-components/**/*"]
+      }
+    },
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "main": "libs/common-components/src/test.ts",
+        "tsConfig": "libs/common-components/tsconfig.spec.json",
+        "karmaConfig": "libs/common-components/karma.conf.js"
+      },
+      "outputs": ["{workspaceRoot}/coverage/libs/common-components"]
+    }
+  },
+  "generators": {
+    "@nrwl/angular:component": {
+      "styleext": "less"
+    }
+  },
+  "tags": []
+}

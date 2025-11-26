@@ -2,5 +2,9 @@
   "extends": "./tsconfig.lib.json",
   "angularCompilerOptions": {
     "enableIvy": false
+  },
+  "compilerOptions": {
+    "target": "ES2022",
+    "useDefineForClassFields": false
   }
 }
