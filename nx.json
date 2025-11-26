@@ -13,9 +13,6 @@
       }
     ]
   },
-  "affected": {
-    "defaultBase": "master"
-  },
   "cli": {
     "warnings": {
       "versionMismatch": false
@@ -60,5 +57,7 @@
       "cache": true
     }
   },
-  "parallel": 1
+  "parallel": 1,
+  "useInferencePlugins": false,
+  "defaultBase": "master"
 }
