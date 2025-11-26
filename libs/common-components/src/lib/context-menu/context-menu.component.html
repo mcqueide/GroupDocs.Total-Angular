@@ -1,20 +1,30 @@
 <div class="gd-context-menu" [ngStyle]="isMobile ? null : {transform: 'translateX(' + translation + 'px)'}"
-     [ngClass]="topPosition > 10 ? 'gd-context-menu-top' : 'gd-context-menu-bottom'">
+  [ngClass]="topPosition > 10 ? 'gd-context-menu-top' : 'gd-context-menu-bottom'">
   <gd-button [icon]="'arrows-alt'" [class]="'ng-fa-icon icon arrows'" [iconSize]="'sm'"></gd-button>
-  <gd-text-menu *ngIf="textMenu" [blur]="isMobile && (isSignature() || isTextSignature())" [color]="formatting.color" [bold]="formatting.bold"
-                [font]="formatting.font" [fontSize]="formatting.fontSize" [italic]="formatting.italic"
-                [underline]="formatting.underline" (outBold)="toggleBold($event)"
-                (outUnderline)="toggleUnderline($event)" (outItalic)="toggleItalic($event)"
-                (outColor)="selectColor($event)" (outFont)="selectFont($event)"
-                (outFontSize)="selectFontSize($event)" [decoration]="isSignature() || isTextSignature()"></gd-text-menu>
-  <gd-button *ngIf="isSignature() || isTextSignature()" [icon]="lock ? 'lock' : 'unlock'" [class]="'ng-fa-icon icon'"
-             (click)="toggleLock()"></gd-button>
-  <gd-button *ngIf="isSignature() || isTextSignature()" [icon]="'copy'" [class]="'ng-fa-icon icon'" (click)="onCopySign()"
-             (touchstart)="onCopySign()"></gd-button>
+  @if (textMenu) {
+    <gd-text-menu [blur]="isMobile && (isSignature() || isTextSignature())" [color]="formatting.color" [bold]="formatting.bold"
+      [font]="formatting.font" [fontSize]="formatting.fontSize" [italic]="formatting.italic"
+      [underline]="formatting.underline" (outBold)="toggleBold($event)"
+      (outUnderline)="toggleUnderline($event)" (outItalic)="toggleItalic($event)"
+      (outColor)="selectColor($event)" (outFont)="selectFont($event)"
+    (outFontSize)="selectFontSize($event)" [decoration]="isSignature() || isTextSignature()"></gd-text-menu>
+  }
+  @if (isSignature() || isTextSignature()) {
+    <gd-button [icon]="lock ? 'lock' : 'unlock'" [class]="'ng-fa-icon icon'"
+    (click)="toggleLock()"></gd-button>
+  }
+  @if (isSignature() || isTextSignature()) {
+    <gd-button [icon]="'copy'" [class]="'ng-fa-icon icon'" (click)="onCopySign()"
+    (touchstart)="onCopySign()"></gd-button>
+  }
   <gd-button [icon]="'trash'" [class]="'ng-fa-icon icon remove'" (click)="deleteItem()"
-             (touchstart)="deleteItem()"></gd-button>
-  <gd-button *ngIf="isTextSignature()" [icon]="'check'" [class]="'ng-fa-icon icon save'" (click)="saveItem($event)"
-             (touchstart)="saveItem($event)"></gd-button>
-  <gd-button *ngIf="isAnnotation()" [icon]="'comment'" [class]="'ng-fa-icon icon'" (click)="addComment()"
-             (touchstart)="addComment()"></gd-button>
+  (touchstart)="deleteItem()"></gd-button>
+  @if (isTextSignature()) {
+    <gd-button [icon]="'check'" [class]="'ng-fa-icon icon save'" (click)="saveItem($event)"
+    (touchstart)="saveItem($event)"></gd-button>
+  }
+  @if (isAnnotation()) {
+    <gd-button [icon]="'comment'" [class]="'ng-fa-icon icon'" (click)="addComment()"
+    (touchstart)="addComment()"></gd-button>
+  }
 </div>

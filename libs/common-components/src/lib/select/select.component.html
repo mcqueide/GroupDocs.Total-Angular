@@ -1,18 +1,30 @@
 <div class="select"
-     (click)="toggle($event)"
-     (touchstart)="toggle($event)"
-     (clickOutside)="onClickOutside($event)"
-     [attachOutsideOnClick]="true">
-  <div *ngIf="!icon" class="selected-value" gdDisabledCursor [dis]="disabled">
-    {{showSelected?.name | translate}}
-  </div>
-  <fa-icon *ngIf="icon" [icon]="['fas',icon]"></fa-icon>
-  <span class="nav-caret" gdDisabledCursor [dis]="disabled"></span>
-  <div class="dropdown-menu" *ngIf="isOpen">
-    <div *ngFor="let option of options">
-      <div *ngIf="!option.separator" (click)="select($event, option)" (touchstart)="select($event, option)"
-           class="option">{{option.name | translate}}</div>
-      <div *ngIf="option.separator" role="separator" class="dropdown-menu-separator"></div>
+  (click)="toggle($event)"
+  (touchstart)="toggle($event)"
+  (clickOutside)="onClickOutside($event)"
+  [attachOutsideOnClick]="true">
+  @if (!icon) {
+    <div class="selected-value" gdDisabledCursor [dis]="disabled">
+      {{showSelected?.name | translate}}
     </div>
-  </div>
+  }
+  @if (icon) {
+    <fa-icon [icon]="['fas',icon]"></fa-icon>
+  }
+  <span class="nav-caret" gdDisabledCursor [dis]="disabled"></span>
+  @if (isOpen) {
+    <div class="dropdown-menu">
+      @for (option of options; track option) {
+        <div>
+          @if (!option.separator) {
+            <div (click)="select($event, option)" (touchstart)="select($event, option)"
+            class="option">{{option.name | translate}}</div>
+          }
+          @if (option.separator) {
+            <div role="separator" class="dropdown-menu-separator"></div>
+          }
+        </div>
+      }
+    </div>
+  }
 </div>

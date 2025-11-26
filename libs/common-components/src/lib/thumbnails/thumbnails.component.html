@@ -1,29 +1,35 @@
 <div class="gd-thumbnails">
   <div class="gd-thumbnails-panzoom">
-    <div *ngFor="let page of pages" id="gd-thumbnails-page-{{page.number}}" class="gd-page"
-         (click)="openPage(page.number)" gdRotation [withMargin]="false"
-         [angle]="page.angle" [isHtmlMode]="mode" [width]="page.width" [height]="page.height">
-      <div class="gd-wrapper"
-           [style.height]="getDimensionWithUnit(page.height)"
-           [style.width]="getDimensionWithUnit(page.width)"
-           [ngStyle]="{'transform': 'translateX(-50%) translateY(-50%) scale('+getScale(page.width, page.height)+')'}"
-           *ngIf="page.data && isHtmlMode"
-           [innerHTML]="page.data | safeHtml"></div>
-      <div class="gd-wrapper" 
-           [style.height]="getDimensionWithUnit(page.height)"
-           [style.width]="getDimensionWithUnit(page.width)"
-           [ngStyle]="{'transform': 'translateX(-50%) translateY(-50%) scale('+getScale(page.width, page.height)+')'}"
-           *ngIf="page.data && !isHtmlMode">
-           <img style="width: inherit !important" class="gd-page-image" [attr.src]="imgData(page.data) | safeResourceHtml"
-             alt/>
+    @for (page of pages; track page) {
+      <div id="gd-thumbnails-page-{{page.number}}" class="gd-page"
+        (click)="openPage(page.number)" gdRotation [withMargin]="false"
+        [angle]="page.angle" [isHtmlMode]="mode" [width]="page.width" [height]="page.height">
+        @if (page.data && isHtmlMode) {
+          <div class="gd-wrapper"
+            [style.height]="getDimensionWithUnit(page.height)"
+            [style.width]="getDimensionWithUnit(page.width)"
+            [ngStyle]="{'transform': 'translateX(-50%) translateY(-50%) scale('+getScale(page.width, page.height)+')'}"
+          [innerHTML]="page.data | safeHtml"></div>
+        }
+        @if (page.data && !isHtmlMode) {
+          <div class="gd-wrapper"
+            [style.height]="getDimensionWithUnit(page.height)"
+            [style.width]="getDimensionWithUnit(page.width)"
+            [ngStyle]="{'transform': 'translateX(-50%) translateY(-50%) scale('+getScale(page.width, page.height)+')'}"
+            >
+            <img style="width: inherit !important" class="gd-page-image" [attr.src]="imgData(page.data) | safeResourceHtml"
+              alt/>
+          </div>
+        }
+        @if (!page.data) {
+          <div class="gd-wrapper"
+            [style.height]="getDimensionWithUnit(800)"
+            [style.width]="getDimensionWithUnit(800)"
+            [ngStyle]="{'transform': 'translateX(-50%) translateY(-50%) scale('+getScale(800, 800)+')'}"
+            [innerHTML]="emptyThumbData(page.number) | safeHtml">
+          </div>
+        }
       </div>
-      <div class="gd-wrapper"
-           [style.height]="getDimensionWithUnit(800)"
-           [style.width]="getDimensionWithUnit(800)"
-           [ngStyle]="{'transform': 'translateX(-50%) translateY(-50%) scale('+getScale(800, 800)+')'}"
-           *ngIf="!page.data"
-           [innerHTML]="emptyThumbData(page.number) | safeHtml">
-      </div>
-    </div>
+    }
   </div>
 </div>

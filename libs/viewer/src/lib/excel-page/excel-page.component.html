@@ -1,10 +1,16 @@
 <div id="page-{{number}}">
-  <div class="gd-wrapper" [innerHTML]="data | safeHtml" *ngIf="data && isHtml" [contentEditable]="(editable) ? true : false"></div>
-  <img class="gd-page-image" [style.width.px]="width" [style.height.px]="height" [attr.src]="imgData | safeResourceHtml"
-       alt=""
-       *ngIf="data && !isHtml">
-  <div class="gd-page-spinner" *ngIf="!data">
-    <fa-icon [icon]="['fas','circle-notch']" [animation]="'spin'"></fa-icon>
-    &nbsp;Loading... Please wait.
-  </div>
+  @if (data && isHtml) {
+    <div class="gd-wrapper" [innerHTML]="data | safeHtml" [contentEditable]="(editable) ? true : false"></div>
+  }
+  @if (data && !isHtml) {
+    <img class="gd-page-image" [style.width.px]="width" [style.height.px]="height" [attr.src]="imgData | safeResourceHtml"
+      alt=""
+      >
+  }
+  @if (!data) {
+    <div class="gd-page-spinner">
+      <fa-icon [icon]="['fas','circle-notch']" [animation]="'spin'"></fa-icon>
+      &nbsp;Loading... Please wait.
+    </div>
+  }
 </div>

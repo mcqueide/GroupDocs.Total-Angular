@@ -1,17 +1,25 @@
-<div class="wait" *ngIf="wait">Please wait...</div>
+@if (wait) {
+  <div class="wait">Please wait...</div>
+}
 <div id="document" class="document" style="height: 100%">
   <div [ngClass]="isDesktop ? 'panzoom auto-height' : 'panzoom mobile'" gdSearchable>
-    <div [ngClass]="file.showGridLines ? 'page-grid-lines' : 'page'" *ngFor="let page of file?.pages"
-         gdRotation [angle]="page.angle" [isHtmlMode]="mode">
-      <gd-excel-page *ngIf="currentPageNo == page.number" [number]="page.number" [data]="page.data" [isHtml]="mode" [angle]="page.angle"
-               [width]="page.width" [height]="page.height" [editable]="page.editable"></gd-excel-page>
-    </div>
+    @for (page of file?.pages; track page) {
+      <div [ngClass]="file.showGridLines ? 'page-grid-lines' : 'page'"
+        gdRotation [angle]="page.angle" [isHtmlMode]="mode">
+        @if (currentPageNo == page.number) {
+          <gd-excel-page [number]="page.number" [data]="page.data" [isHtml]="mode" [angle]="page.angle"
+          [width]="page.width" [height]="page.height" [editable]="page.editable"></gd-excel-page>
+        }
+      </div>
+    }
   </div>
 </div>
 <div class="sheets">
   <div class="sheets-wrapper">
-    <div *ngFor="let page of file?.pages">
-      <gd-button [icon]="'eye'" [ngClass]="{'active': currentPageNo == page.number }" (click)="selectSheet(page.number)">{{page.sheetName}}</gd-button>
-    </div>
+    @for (page of file?.pages; track page) {
+      <div>
+        <gd-button [icon]="'eye'" [ngClass]="{'active': currentPageNo == page.number }" (click)="selectSheet(page.number)">{{page.sheetName}}</gd-button>
+      </div>
+    }
   </div>
 </div>

@@ -1,4 +1,6 @@
 <div class="wrapper">
-  <a class="back" [routerLink]="['']" *ngIf="!total">Back</a>
+  @if (!total) {
+    <a class="back" [routerLink]="['']">Back</a>
+  }
   <router-outlet></router-outlet>
 </div>

@@ -1,5 +1,7 @@
-<div class="loading-wrapper" *ngIf="loadingMask">
+@if (loadingMask) {
+  <div class="loading-wrapper">
     <div class="loading-message">
-        <fa-icon [icon]="['fas','circle-notch']" [animation]="'spin'"></fa-icon> &nbsp;{{'Loading... Please wait.' | translate}}
+      <fa-icon [icon]="['fas','circle-notch']" [animation]="'spin'"></fa-icon> &nbsp;{{'Loading... Please wait.' | translate}}
     </div>
-</div>
+  </div>
+}

@@ -1,7 +1,13 @@
 <div [ngClass]="(active) ? 'gd-tab active' : 'gd-tab'" (mousedown)="selectTab()">
-  <div class="smp-tab-title" *ngIf="tabTitle">{{tabTitle}}</div>
-  <fa-icon *ngIf="icon" [icon]="['fas',icon]" [class]="'ng-fa-icon icon'"></fa-icon>
+  @if (tabTitle) {
+    <div class="smp-tab-title">{{tabTitle}}</div>
+  }
+  @if (icon) {
+    <fa-icon [icon]="['fas',icon]" [class]="'ng-fa-icon icon'"></fa-icon>
+  }
 </div>
-<div *ngIf="content" [ngClass]="(active) ? 'tab-content active' : 'tab-content'">
-  <ng-content></ng-content>
-</div>
+@if (content) {
+  <div [ngClass]="(active) ? 'tab-content active' : 'tab-content'">
+    <ng-content></ng-content>
+  </div>
+}
