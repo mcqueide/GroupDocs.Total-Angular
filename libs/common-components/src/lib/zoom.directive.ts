@@ -4,7 +4,8 @@ import {FileUtil} from "./file.service";
 import { WindowService } from './window.service';
 
 @Directive({
-  selector: '[gdZoom]'
+    selector: '[gdZoom]',
+    standalone: false
 })
 export class ZoomDirective implements OnInit, OnDestroy, AfterViewInit, OnChanges {
 

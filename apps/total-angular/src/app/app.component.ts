@@ -3,9 +3,10 @@ import {ActivationEnd, Router} from "@angular/router";
 import {filter} from "rxjs/operators";
 
 @Component({
-  selector: 'gd-total',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.less']
+    selector: 'gd-total',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.less'],
+    standalone: false
 })
 export class AppComponent {
   title = 'total-angular';

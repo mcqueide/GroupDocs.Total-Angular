@@ -1,7 +1,8 @@
 import {Directive, HostBinding, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 
 @Directive({
-  selector: '[gdRotation]'
+    selector: '[gdRotation]',
+    standalone: false
 })
 export class RotationDirective implements OnInit, OnChanges {
 

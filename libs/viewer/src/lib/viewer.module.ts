@@ -1,5 +1,5 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {APP_INITIALIZER, ModuleWithProviders, NgModule} from '@angular/core';
+import { ModuleWithProviders, NgModule, inject, provideAppInitializer } from '@angular/core';
 import { HTTP_INTERCEPTORS, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import {ViewerAppComponent} from './viewer-app.component';
 import {
@@ -68,11 +68,10 @@ export function translateLoaderFactory() {
             useClass: ErrorInterceptorService,
             multi: true
         },
-        {
-            provide: APP_INITIALIZER,
-            useFactory: initializeApp,
-            deps: [ViewerConfigService], multi: true
-        },
+        provideAppInitializer(() => {
+        const initializerFn = (initializeApp)(inject(ViewerConfigService));
+        return initializerFn();
+      }),
         LoadingMaskService,
         {
             provide: HTTP_INTERCEPTORS,

@@ -2,9 +2,10 @@ import {AfterViewInit, Component, Input, OnInit} from '@angular/core';
 import {LoadingMaskService} from "../loading-mask.service";
 
 @Component({
-  selector: 'gd-loading-mask',
-  templateUrl: './loading-mask.component.html',
-  styleUrls: ['./loading-mask.component.less']
+    selector: 'gd-loading-mask',
+    templateUrl: './loading-mask.component.html',
+    styleUrls: ['./loading-mask.component.less'],
+    standalone: false
 })
 
 export class LoadingMaskComponent implements OnInit, AfterViewInit {

@@ -27,9 +27,10 @@ import { IntervalTimer } from './interval-timer';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
-  selector: 'gd-viewer',
-  templateUrl: './viewer-app.component.html',
-  styleUrls: ['./viewer-app.component.less']
+    selector: 'gd-viewer',
+    templateUrl: './viewer-app.component.html',
+    styleUrls: ['./viewer-app.component.less'],
+    standalone: false
 })
 export class ViewerAppComponent implements OnInit, OnDestroy, AfterViewInit {
   title = 'viewer';

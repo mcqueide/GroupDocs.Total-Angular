@@ -4,9 +4,10 @@ import { ZoomService } from  '@groupdocs.examples.angular/common-components';
 import { ExcelPageComponent } from '../excel-page/excel-page.component';
 
 @Component({
-  selector: 'gd-excel-document',
-  templateUrl: './excel-document.component.html',
-  styleUrls: ['./excel-document.component.less'],
+    selector: 'gd-excel-document',
+    templateUrl: './excel-document.component.html',
+    styleUrls: ['./excel-document.component.less'],
+    standalone: false
 })
 export class ExcelDocumentComponent extends DocumentComponent implements OnInit, AfterViewInit  {
   @ViewChildren(ExcelPageComponent) pages: QueryList<ExcelPageComponent>;

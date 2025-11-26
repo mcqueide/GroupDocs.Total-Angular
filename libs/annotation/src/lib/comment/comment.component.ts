@@ -2,9 +2,10 @@ import {Component, Input, OnInit} from '@angular/core';
 import {Comment} from '../annotation-models'
 
 @Component({
-  selector: 'gd-comment',
-  templateUrl: './comment.component.html',
-  styleUrls: ['./comment.component.less']
+    selector: 'gd-comment',
+    templateUrl: './comment.component.html',
+    styleUrls: ['./comment.component.less'],
+    standalone: false
 })
 export class CommentComponent implements OnInit {
 

@@ -16,9 +16,10 @@ import * as jquery from 'jquery';
 const $ = jquery;
 
 @Component({
-  selector: 'gd-annotation',
-  templateUrl: './annotation.component.html',
-  styleUrls: ['./annotation.component.less']
+    selector: 'gd-annotation',
+    templateUrl: './annotation.component.html',
+    styleUrls: ['./annotation.component.less'],
+    standalone: false
 })
 export class AnnotationComponent implements OnInit, AfterViewInit, AfterViewChecked {
 

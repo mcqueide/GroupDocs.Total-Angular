@@ -4,9 +4,10 @@ import {TopTabActivatorService} from "../top-tab-activator.service";
 import {ModalService, CommonModals} from "../modal.service";
 
 @Component({
-  selector: 'gd-top-tab',
-  templateUrl: './top-tab.component.html',
-  styleUrls: ['./top-tab.component.less']
+    selector: 'gd-top-tab',
+    templateUrl: './top-tab.component.html',
+    styleUrls: ['./top-tab.component.less'],
+    standalone: false
 })
 export class TopTabComponent implements OnInit {
   @Input() id: string;

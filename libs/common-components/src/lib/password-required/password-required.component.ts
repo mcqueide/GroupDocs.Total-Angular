@@ -6,9 +6,10 @@ import * as jquery from "jquery";
 const $ = jquery;
 
 @Component({
-  selector: 'gd-password-required',
-  templateUrl: './password-required.component.html',
-  styleUrls: ['./password-required.component.less']
+    selector: 'gd-password-required',
+    templateUrl: './password-required.component.html',
+    styleUrls: ['./password-required.component.less'],
+    standalone: false
 })
 export class PasswordRequiredComponent implements OnInit {
   message: string;

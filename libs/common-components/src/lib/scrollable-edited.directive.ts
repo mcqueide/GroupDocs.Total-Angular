@@ -15,7 +15,8 @@ import { fromEvent } from 'rxjs';
 import { delay, throttleTime } from 'rxjs/operators';
 
 @Directive({
-  selector: '[gdScrollableEdited]'
+    selector: '[gdScrollableEdited]',
+    standalone: false
 })
 export class ScrollableEditedDirective implements AfterViewInit, OnChanges {
   @Input() isPresentation: boolean;

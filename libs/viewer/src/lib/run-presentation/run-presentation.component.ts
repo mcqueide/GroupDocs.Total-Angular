@@ -21,9 +21,10 @@ import { Constants } from '../viewer.constants';
 const $ = jquery;
 
 @Component({
-  selector: 'gd-run-presentation',
-  templateUrl: './run-presentation.component.html',
-  styleUrls: ['./run-presentation.component.less']
+    selector: 'gd-run-presentation',
+    templateUrl: './run-presentation.component.html',
+    styleUrls: ['./run-presentation.component.less'],
+    standalone: false
 })
 export class RunPresentationComponent implements OnInit, AfterViewChecked, AfterViewInit, OnChanges {
 

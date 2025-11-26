@@ -2,9 +2,10 @@ import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core'
 import { ExcelPageService } from '../excel-page.service';
 
 @Component({
-  selector: 'gd-excel-page',
-  templateUrl: './excel-page.component.html',
-  styleUrls: ['./excel-page.component.less']
+    selector: 'gd-excel-page',
+    templateUrl: './excel-page.component.html',
+    styleUrls: ['./excel-page.component.less'],
+    standalone: false
 })
 export class ExcelPageComponent implements OnInit, OnChanges {
 

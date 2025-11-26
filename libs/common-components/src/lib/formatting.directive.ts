@@ -6,7 +6,8 @@ const $ = jquery;
 import {SelectionService} from './selection.service';
 
 @Directive({
-  selector: '[gdFormatting]'
+    selector: '[gdFormatting]',
+    standalone: false
 })
 export class FormattingDirective implements OnInit {
 

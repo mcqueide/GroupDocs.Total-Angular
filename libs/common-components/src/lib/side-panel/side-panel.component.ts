@@ -1,9 +1,10 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
 
 @Component({
-  selector: 'gd-side-panel',
-  templateUrl: './side-panel.component.html',
-  styleUrls: ['./side-panel.component.less']
+    selector: 'gd-side-panel',
+    templateUrl: './side-panel.component.html',
+    styleUrls: ['./side-panel.component.less'],
+    standalone: false
 })
 
 export class SidePanelComponent {

@@ -5,9 +5,10 @@ import {Utils} from "../file.service";
 const $ = jquery;
 
 @Component({
-  selector: 'gd-resizing',
-  templateUrl: './resizing.component.html',
-  styleUrls: ['./resizing.component.less']
+    selector: 'gd-resizing',
+    templateUrl: './resizing.component.html',
+    styleUrls: ['./resizing.component.less'],
+    standalone: false
 })
 export class ResizingComponent implements OnInit, AfterViewInit {
 

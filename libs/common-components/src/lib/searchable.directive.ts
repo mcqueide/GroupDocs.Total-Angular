@@ -7,7 +7,8 @@ import {debounceTime, distinctUntilChanged} from "rxjs/operators";
 const $ = jquery;
 
 @Directive({
-  selector: '[gdSearchable]'
+    selector: '[gdSearchable]',
+    standalone: false
 })
 export class SearchableDirective {
 

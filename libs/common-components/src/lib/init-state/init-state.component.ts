@@ -1,9 +1,10 @@
 import {Component, Input, Output, EventEmitter, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'gd-init-state',
-  templateUrl: './init-state.component.html',
-  styleUrls: ['./init-state.component.less']
+    selector: 'gd-init-state',
+    templateUrl: './init-state.component.html',
+    styleUrls: ['./init-state.component.less'],
+    standalone: false
 })
 export class InitStateComponent implements OnInit {
   @Input() icon: string;

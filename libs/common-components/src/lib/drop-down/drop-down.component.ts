@@ -40,10 +40,11 @@ const verticalAlignment = {
  *  DropDownToggleComponent
  */
 @Component({
-  selector: 'gd-drop-down-toggle',
-  template: '<ng-content></ng-content>',
-  styleUrls: ['./drop-down.component.less'],
-  encapsulation : ViewEncapsulation.None
+    selector: 'gd-drop-down-toggle',
+    template: '<ng-content></ng-content>',
+    styleUrls: ['./drop-down.component.less'],
+    encapsulation: ViewEncapsulation.None,
+    standalone: false
 })
 export class DropDownToggleComponent{
   @HostListener('click',['$event'])
@@ -55,10 +56,11 @@ export class DropDownToggleComponent{
  *  DropDownItemsComponent
  */
 @Component({
-  selector: 'gd-drop-down-items',
-  template: '<div class="drop-down-items" (clickOutside)="onClickOutside($event)" [clickOutsideEnabled]="isOpen" [style.right]="horizontalAlign" [style.top]="verticalAlign"><ng-content></ng-content></div>',
-  styleUrls: ['./drop-down.component.less'],
-  encapsulation : ViewEncapsulation.None
+    selector: 'gd-drop-down-items',
+    template: '<div class="drop-down-items" (clickOutside)="onClickOutside($event)" [clickOutsideEnabled]="isOpen" [style.right]="horizontalAlign" [style.top]="verticalAlign"><ng-content></ng-content></div>',
+    styleUrls: ['./drop-down.component.less'],
+    encapsulation: ViewEncapsulation.None,
+    standalone: false
 })
 export class DropDownItemsComponent{
 
@@ -85,9 +87,10 @@ export class DropDownItemsComponent{
  *  DropDownItemComponent
  */
 @Component({
-  selector: 'gd-drop-down-item',
-  template: '<div class="drop-down-item"><ng-content></ng-content></div>',
-  styleUrls: ['./drop-down.component.less'],
+    selector: 'gd-drop-down-item',
+    template: '<div class="drop-down-item"><ng-content></ng-content></div>',
+    styleUrls: ['./drop-down.component.less'],
+    standalone: false
 })
 export class DropDownItemComponent{
   @HostBinding('class')
@@ -111,10 +114,11 @@ export class DropDownItemComponent{
  *  DropDownComponent
  */
 @Component({
-  selector: 'gd-drop-down',
-  template: '<div class="drop-down"><ng-content></ng-content></div>',
-  styleUrls: ['./drop-down.component.less'],
-  encapsulation : ViewEncapsulation.None
+    selector: 'gd-drop-down',
+    template: '<div class="drop-down"><ng-content></ng-content></div>',
+    styleUrls: ['./drop-down.component.less'],
+    encapsulation: ViewEncapsulation.None,
+    standalone: false
 })
 export class DropDownComponent{
   @Input()

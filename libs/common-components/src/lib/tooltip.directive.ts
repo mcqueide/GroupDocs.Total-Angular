@@ -1,7 +1,8 @@
 import {Directive, EventEmitter, HostListener, Input, Output} from '@angular/core';
 
 @Directive({
-  selector: '[gdTooltip]'
+    selector: '[gdTooltip]',
+    standalone: false
 })
 export class TooltipDirective {
 

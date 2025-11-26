@@ -5,7 +5,8 @@ import {RenderPrintService} from "./render-print.service";
 type IFrame = HTMLElement & {contentWindow: Window}
 
 @Directive({
-  selector: '[gdRenderPrint]'
+    selector: '[gdRenderPrint]',
+    standalone: false
 })
 export class RenderPrintDirective {
   @Input() htmlMode: boolean;

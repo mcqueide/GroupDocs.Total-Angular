@@ -8,9 +8,10 @@ export interface Option {
 }
 
 @Component({
-  selector: 'gd-select',
-  templateUrl: './select.component.html',
-  styleUrls: ['./select.component.less']
+    selector: 'gd-select',
+    templateUrl: './select.component.html',
+    styleUrls: ['./select.component.less'],
+    standalone: false
 })
 export class SelectComponent {
 

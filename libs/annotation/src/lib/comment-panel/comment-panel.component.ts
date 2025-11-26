@@ -3,9 +3,10 @@ import {CommentAnnotationService} from "../comment-annotation.service";
 import {Comment} from '../annotation-models'
 
 @Component({
-  selector: 'gd-comment-panel',
-  templateUrl: './comment-panel.component.html',
-  styleUrls: ['./comment-panel.component.less']
+    selector: 'gd-comment-panel',
+    templateUrl: './comment-panel.component.html',
+    styleUrls: ['./comment-panel.component.less'],
+    standalone: false
 })
 export class CommentPanelComponent implements OnInit {
   @Input() comments: [];

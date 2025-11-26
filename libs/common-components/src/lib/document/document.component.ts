@@ -17,9 +17,10 @@ import { NavigateService } from '../navigate.service';
 const $ = jquery;
 
 @Component({
-  selector: 'gd-document',
-  templateUrl: './document.component.html',
-  styleUrls: ['./document.component.less']
+    selector: 'gd-document',
+    templateUrl: './document.component.html',
+    styleUrls: ['./document.component.less'],
+    standalone: false
 })
 export class DocumentComponent implements OnInit, AfterViewChecked, AfterViewInit, OnChanges {
 

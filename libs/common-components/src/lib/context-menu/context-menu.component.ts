@@ -10,9 +10,10 @@ export class MenuType {
 }
 
 @Component({
-  selector: 'gd-context-menu',
-  templateUrl: './context-menu.component.html',
-  styleUrls: ['./context-menu.component.less']
+    selector: 'gd-context-menu',
+    templateUrl: './context-menu.component.html',
+    styleUrls: ['./context-menu.component.less'],
+    standalone: false
 })
 export class ContextMenuComponent implements OnInit {
   @Input() formatting: Formatting = Formatting.default();

@@ -5,9 +5,10 @@ import {ZoomService} from '../zoom.service'
 import {FileUtil} from '../file.service';
 
 @Component({
-  selector: 'gd-thumbnails',
-  templateUrl: './thumbnails.component.html',
-  styleUrls: ['./thumbnails.component.less']
+    selector: 'gd-thumbnails',
+    templateUrl: './thumbnails.component.html',
+    styleUrls: ['./thumbnails.component.less'],
+    standalone: false
 })
 export class ThumbnailsComponent implements OnInit, OnChanges, AfterViewInit, OnDestroy {
 

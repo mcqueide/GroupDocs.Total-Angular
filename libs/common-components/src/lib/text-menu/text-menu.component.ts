@@ -9,9 +9,10 @@ import { WindowService } from '../window.service';
 const $ = jquery;
 
 @Component({
-  selector: 'gd-text-menu',
-  templateUrl: './text-menu.component.html',
-  styleUrls: ['./text-menu.component.less']
+    selector: 'gd-text-menu',
+    templateUrl: './text-menu.component.html',
+    styleUrls: ['./text-menu.component.less'],
+    standalone: false
 })
 export class TextMenuComponent implements OnInit {
   @Input() blur: boolean;

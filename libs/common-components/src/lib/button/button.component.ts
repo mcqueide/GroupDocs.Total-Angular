@@ -2,9 +2,10 @@ import {Component, Input} from '@angular/core';
 import {WindowService} from "../window.service";
 
 @Component({
-  selector: 'gd-button',
-  templateUrl: './button.component.html',
-  styleUrls: ['./button.component.less']
+    selector: 'gd-button',
+    templateUrl: './button.component.html',
+    styleUrls: ['./button.component.less'],
+    standalone: false
 })
 export class ButtonComponent {
   @Input() iconOnly = true;

@@ -2,7 +2,8 @@ import {AfterViewInit, Directive, Input, OnDestroy, ViewContainerRef} from '@ang
 import {HostingDynamicComponentService} from "./hosting-dynamic-component.service";
 
 @Directive({
-  selector: '[gdHostDynamic]'
+    selector: '[gdHostDynamic]',
+    standalone: false
 })
 export class HostDynamicDirective implements AfterViewInit, OnDestroy {
   @Input() ident: number;

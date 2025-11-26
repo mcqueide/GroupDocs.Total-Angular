@@ -5,9 +5,10 @@ import * as jquery from 'jquery';
 const $ = jquery;
 
 @Component({
-  selector: 'gd-create-comment',
-  templateUrl: './create-comment.component.html',
-  styleUrls: ['./create-comment.component.less']
+    selector: 'gd-create-comment',
+    templateUrl: './create-comment.component.html',
+    styleUrls: ['./create-comment.component.less'],
+    standalone: false
 })
 export class CreateCommentComponent implements OnInit {
   @Input() comment: Comment;

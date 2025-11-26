@@ -32,9 +32,10 @@ import { AnnotationConfigService } from "./annotation-config.service";
 const $ = jquery;
 
 @Component({
-  selector: 'gd-annotation-app',
-  templateUrl: './annotation-app.component.html',
-  styleUrls: ['./annotation-app.component.less']
+    selector: 'gd-annotation-app',
+    templateUrl: './annotation-app.component.html',
+    styleUrls: ['./annotation-app.component.less'],
+    standalone: false
 })
 export class AnnotationAppComponent implements OnInit {
   title = 'annotation';

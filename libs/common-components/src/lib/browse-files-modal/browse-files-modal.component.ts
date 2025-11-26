@@ -11,9 +11,10 @@ const upload_url = 'URL';
 const uploads_choices = [{name: upload_disc, icon: 'hdd'}, {name: upload_url, icon: 'link'}];
 
 @Component({
-  selector: 'gd-browse-files-modal',
-  templateUrl: './browse-files-modal.component.html',
-  styleUrls: ['./browse-files-modal.component.less']
+    selector: 'gd-browse-files-modal',
+    templateUrl: './browse-files-modal.component.html',
+    styleUrls: ['./browse-files-modal.component.less'],
+    standalone: false
 })
 export class BrowseFilesModalComponent implements OnInit {
   uploads = uploads_choices;

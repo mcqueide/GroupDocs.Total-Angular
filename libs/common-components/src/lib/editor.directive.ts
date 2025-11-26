@@ -3,7 +3,8 @@ import {SelectionService} from './selection.service';
 import {EditHtmlService} from "./edit-html.service";
 
 @Directive({
-  selector: '[gdEditor]'
+    selector: '[gdEditor]',
+    standalone: false
 })
 export class EditorDirective {
   @Input() text: any;

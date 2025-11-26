@@ -1,9 +1,10 @@
 import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'gd-logo',
-  templateUrl: './logo.component.html',
-  styleUrls: ['./logo.component.less']
+    selector: 'gd-logo',
+    templateUrl: './logo.component.html',
+    styleUrls: ['./logo.component.less'],
+    standalone: false
 })
 export class LogoComponent implements OnInit {
 

@@ -17,7 +17,8 @@ import * as jquery from "jquery";
 const $ = jquery;
 
 @Directive({
-  selector: '[gdScrollable]'
+    selector: '[gdScrollable]',
+    standalone: false
 })
 export class ScrollableDirective implements AfterViewInit, OnChanges, OnInit {
   @Input() isPresentation: boolean;

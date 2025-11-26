@@ -1,7 +1,10 @@
 import {Pipe, PipeTransform} from '@angular/core';
 import {DomSanitizer, SafeHtml} from '@angular/platform-browser';
 
-@Pipe({name: 'safeHtml'})
+@Pipe({
+    name: 'safeHtml',
+    standalone: false
+})
 export class SanitizeHtmlPipe implements PipeTransform{
   constructor(private sanitizer: DomSanitizer) {
   }
@@ -11,7 +14,10 @@ export class SanitizeHtmlPipe implements PipeTransform{
   }
 }
 
-@Pipe({name: 'safeResourceHtml'})
+@Pipe({
+    name: 'safeResourceHtml',
+    standalone: false
+})
 export class SanitizeResourceHtmlPipe implements PipeTransform{
   constructor(private sanitizer: DomSanitizer) {
   }
@@ -21,7 +27,10 @@ export class SanitizeResourceHtmlPipe implements PipeTransform{
   }
 }
 
-@Pipe({name: 'safeStyle'})
+@Pipe({
+    name: 'safeStyle',
+    standalone: false
+})
 export class SanitizeStylePipe implements PipeTransform{
   constructor(private sanitizer: DomSanitizer) {
   }
@@ -31,7 +40,10 @@ export class SanitizeStylePipe implements PipeTransform{
   }
 }
 
-@Pipe({name: 'highlight'})
+@Pipe({
+    name: 'highlight',
+    standalone: false
+})
 export class HighlightSearchPipe implements PipeTransform {
 
   transform(value: string, args: string): any {

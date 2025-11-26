@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'gd-success-modal',
-  templateUrl: './success-modal.component.html',
-  styleUrls: ['./success-modal.component.less']
+    selector: 'gd-success-modal',
+    templateUrl: './success-modal.component.html',
+    styleUrls: ['./success-modal.component.less'],
+    standalone: false
 })
 export class SuccessModalComponent implements OnInit {
 

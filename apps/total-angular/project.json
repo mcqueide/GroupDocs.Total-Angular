@@ -11,12 +11,15 @@
   "prefix": "total-angular",
   "targets": {
     "build": {
-      "executor": "@angular-devkit/build-angular:browser",
+      "executor": "@angular-devkit/build-angular:application",
       "options": {
-        "outputPath": "dist/apps/total-angular",
+        "outputPath": {
+          "base": "dist/apps/total-angular"
+        },
         "index": "apps/total-angular/src/index.html",
-        "main": "apps/total-angular/src/main.ts",
-        "polyfills": "apps/total-angular/src/polyfills.ts",
+        "polyfills": [
+          "apps/total-angular/src/polyfills.ts"
+        ],
         "tsConfig": "apps/total-angular/tsconfig.app.json",
         "assets": [
           "apps/total-angular/src/favicon.ico",
@@ -30,7 +33,7 @@
         "sourceMap": true,
         "optimization": false,
         "namedChunks": true,
-        "vendorChunk": true
+        "browser": "apps/total-angular/src/main.ts"
       },
       "configurations": {
         "production": {

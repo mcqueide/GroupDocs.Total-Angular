@@ -4,7 +4,8 @@ import {FileUtil} from "./file.service";
 import { WindowService } from './window.service';
 
 @Directive({
-  selector: '[gdPageMarker]'
+    selector: '[gdPageMarker]',
+    standalone: false
 })
 export class PageMarkerDirective implements AfterViewInit {
 

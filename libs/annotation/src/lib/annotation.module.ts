@@ -1,4 +1,4 @@
-import {APP_INITIALIZER, ModuleWithProviders, NgModule} from '@angular/core';
+import { ModuleWithProviders, NgModule, inject, provideAppInitializer } from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {
   Api,
@@ -51,11 +51,10 @@ export function setupLoadingInterceptor(service: LoadingMaskService) {
             useClass: ErrorInterceptorService,
             multi: true
         },
-        {
-            provide: APP_INITIALIZER,
-            useFactory: initializeApp,
-            deps: [AnnotationConfigService], multi: true
-        },
+        provideAppInitializer(() => {
+        const initializerFn = (initializeApp)(inject(AnnotationConfigService));
+        return initializerFn();
+      }),
         LoadingMaskService,
         {
             provide: HTTP_INTERCEPTORS,

@@ -1,9 +1,10 @@
 import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 
 @Component({
-  selector: 'gd-page',
-  templateUrl: './page.component.html',
-  styleUrls: ['./page.component.less']
+    selector: 'gd-page',
+    templateUrl: './page.component.html',
+    styleUrls: ['./page.component.less'],
+    standalone: false
 })
 export class PageComponent implements OnInit, OnChanges {
 

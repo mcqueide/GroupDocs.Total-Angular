@@ -12,9 +12,10 @@ const DEFAULT_COLORS = [
 ];
 
 @Component({
-  selector: 'gd-color-picker',
-  templateUrl: './color-picker.component.html',
-  styleUrls: ['./color-picker.component.less']
+    selector: 'gd-color-picker',
+    templateUrl: './color-picker.component.html',
+    styleUrls: ['./color-picker.component.less'],
+    standalone: false
 })
 export class ColorPickerComponent implements OnInit {
   @Input() isOpen = false;

@@ -2,9 +2,10 @@ import {Component, ElementRef, EventEmitter, Input, OnDestroy, OnInit, Output} f
 import {ModalService} from "../modal.service";
 
 @Component({
-  selector: 'gd-modal',
-  templateUrl: './modal.component.html',
-  styleUrls: ['./modal.component.less']
+    selector: 'gd-modal',
+    templateUrl: './modal.component.html',
+    styleUrls: ['./modal.component.less'],
+    standalone: false
 })
 export class ModalComponent implements OnInit, OnDestroy {
   @Input() id: string;

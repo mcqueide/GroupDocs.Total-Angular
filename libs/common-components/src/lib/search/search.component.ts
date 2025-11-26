@@ -2,9 +2,10 @@ import {AfterViewInit, Component, ElementRef, EventEmitter, OnInit, Output, View
 import {SearchService} from "../search.service";
 
 @Component({
-  selector: 'gd-search',
-  templateUrl: './search.component.html',
-  styleUrls: ['./search.component.less']
+    selector: 'gd-search',
+    templateUrl: './search.component.html',
+    styleUrls: ['./search.component.less'],
+    standalone: false
 })
 export class SearchComponent implements OnInit, AfterViewInit {
 

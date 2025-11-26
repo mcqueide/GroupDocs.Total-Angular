@@ -2,7 +2,8 @@ import {Directive, EventEmitter, HostBinding, HostListener, Input, Output} from 
 import {UploadFilesService} from "./upload-files.service";
 
 @Directive({
-  selector: '[gdDnd]'
+    selector: '[gdDnd]',
+    standalone: false
 })
 export class DndDirective {
 

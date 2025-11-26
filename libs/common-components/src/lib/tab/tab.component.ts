@@ -2,9 +2,10 @@ import {Component, Input, OnInit} from '@angular/core';
 import {TabActivatorService} from "../tab-activator.service";
 
 @Component({
-  selector: 'gd-tab',
-  templateUrl: './tab.component.html',
-  styleUrls: ['./tab.component.less']
+    selector: 'gd-tab',
+    templateUrl: './tab.component.html',
+    styleUrls: ['./tab.component.less'],
+    standalone: false
 })
 export class TabComponent implements OnInit {
   @Input() id: string;

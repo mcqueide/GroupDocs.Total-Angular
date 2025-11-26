@@ -1,7 +1,8 @@
 import {Directive, HostBinding, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 
 @Directive({
-  selector: '[gdDisabledCursor]'
+    selector: '[gdDisabledCursor]',
+    standalone: false
 })
 export class DisabledCursorDirective implements OnInit, OnChanges {
 

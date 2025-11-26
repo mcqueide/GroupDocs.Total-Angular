@@ -7,7 +7,8 @@ import * as jquery from "jquery";
 const $ = jquery;
 
 @Directive({
-  selector: '[gdMouseWheel]'
+    selector: '[gdMouseWheel]',
+    standalone: false
 })
 export class MouseWheelDirective {
   @Output() mouseWheelUp = new EventEmitter();

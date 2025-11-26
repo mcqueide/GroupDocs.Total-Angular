@@ -1,9 +1,10 @@
 import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'gd-tooltip',
-  templateUrl: './tooltip.component.html',
-  styleUrls: ['./tooltip.component.less']
+    selector: 'gd-tooltip',
+    templateUrl: './tooltip.component.html',
+    styleUrls: ['./tooltip.component.less'],
+    standalone: false
 })
 export class TooltipComponent implements OnInit {
 
