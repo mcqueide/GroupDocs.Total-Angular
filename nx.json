@@ -8,20 +8,20 @@
     "nx.json": "*"
   },
   "projects": {
-    "total-angular-e2e": {
-      "tags": [],
-      "implicitDependencies": ["total-angular"]
-    },
-    "total-angular": {
-      "tags": []
-    },
-    "viewer": {
+    "annotation": {
       "tags": []
     },
     "common-components": {
       "tags": []
     },
-    "annotation": {
+    "total-angular": {
+      "tags": []
+    },
+    "total-angular-e2e": {
+      "tags": [],
+      "implicitDependencies": ["total-angular"]
+    },
+    "viewer": {
       "tags": []
     }
   },
@@ -32,5 +32,13 @@
         "cacheableOperations": ["build", "lint", "test", "e2e"]
       }
     }
+  },
+  "targetDependencies": {
+    "build": [
+      {
+        "target": "build",
+        "projects": "dependencies"
+      }
+    ]
   }
 }

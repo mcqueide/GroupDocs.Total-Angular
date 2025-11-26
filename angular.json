@@ -3,6 +3,94 @@
   "version": 1,
   "newProjectRoot": "",
   "projects": {
+    "annotation": {
+      "projectType": "library",
+      "root": "libs/annotation",
+      "sourceRoot": "libs/annotation/src",
+      "prefix": "gd",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "libs/annotation/tsconfig.lib.json",
+            "project": "libs/annotation/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/annotation/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/annotation/tsconfig.lib.json",
+              "libs/annotation/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/annotation/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/annotation/src/test.ts",
+            "tsConfig": "libs/annotation/tsconfig.spec.json",
+            "karmaConfig": "libs/annotation/karma.conf.js"
+          },
+          "outputs": ["coverage/libs/annotation"]
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "less"
+        }
+      }
+    },
+    "common-components": {
+      "projectType": "library",
+      "root": "libs/common-components",
+      "sourceRoot": "libs/common-components/src",
+      "prefix": "gd",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "libs/common-components/tsconfig.lib.json",
+            "project": "libs/common-components/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/common-components/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/common-components/tsconfig.lib.json",
+              "libs/common-components/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**/*", "!libs/common-components/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/common-components/src/test.ts",
+            "tsConfig": "libs/common-components/tsconfig.spec.json",
+            "karmaConfig": "libs/common-components/karma.conf.js"
+          },
+          "outputs": ["coverage/libs/common-components"]
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "less"
+        }
+      }
+    },
     "total-angular": {
       "projectType": "application",
       "schematics": {
@@ -26,9 +114,7 @@
               "apps/total-angular/src/favicon.ico",
               "apps/total-angular/src/assets"
             ],
-            "styles": [
-              "apps/total-angular/src/styles.less"
-            ],
+            "styles": ["apps/total-angular/src/styles.less"],
             "scripts": [],
             "vendorChunk": true,
             "extractLicenses": false,
@@ -65,9 +151,7 @@
               ]
             }
           },
-          "outputs": [
-            "{options.outputPath}"
-          ],
+          "outputs": ["{options.outputPath}"],
           "defaultConfiguration": ""
         },
         "serve": {
@@ -94,10 +178,7 @@
               "apps/total-angular/tsconfig.app.json",
               "apps/total-angular/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**/*",
-              "!apps/total-angular/**/*"
-            ]
+            "exclude": ["**/node_modules/**/*", "!apps/total-angular/**/*"]
           }
         },
         "test": {
@@ -111,9 +192,7 @@
             "scripts": [],
             "assets": []
           },
-          "outputs": [
-            "coverage/apps/total-angular"
-          ]
+          "outputs": ["coverage/apps/total-angular"]
         }
       }
     },
@@ -139,10 +218,7 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "apps/total-angular-e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**/*",
-              "!apps/total-angular-e2e/**/*"
-            ]
+            "exclude": ["**/node_modules/**/*", "!apps/total-angular-e2e/**/*"]
           }
         }
       }
@@ -172,10 +248,7 @@
               "libs/viewer/tsconfig.lib.json",
               "libs/viewer/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**/*",
-              "!libs/viewer/**/*"
-            ]
+            "exclude": ["**/node_modules/**/*", "!libs/viewer/**/*"]
           }
         },
         "test": {
@@ -185,107 +258,7 @@
             "tsConfig": "libs/viewer/tsconfig.spec.json",
             "karmaConfig": "libs/viewer/karma.conf.js"
           },
-          "outputs": [
-            "coverage/libs/viewer"
-          ]
-        }
-      },
-      "schematics": {
-        "@nrwl/angular:component": {
-          "styleext": "less"
-        }
-      }
-    },
-    "common-components": {
-      "projectType": "library",
-      "root": "libs/common-components",
-      "sourceRoot": "libs/common-components/src",
-      "prefix": "gd",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:ng-packagr",
-          "options": {
-            "tsConfig": "libs/common-components/tsconfig.lib.json",
-            "project": "libs/common-components/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "libs/common-components/tsconfig.lib.prod.json"
-            }
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/common-components/tsconfig.lib.json",
-              "libs/common-components/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**/*",
-              "!libs/common-components/**/*"
-            ]
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "libs/common-components/src/test.ts",
-            "tsConfig": "libs/common-components/tsconfig.spec.json",
-            "karmaConfig": "libs/common-components/karma.conf.js"
-          },
-          "outputs": [
-            "coverage/libs/common-components"
-          ]
-        }
-      },
-      "schematics": {
-        "@nrwl/angular:component": {
-          "styleext": "less"
-        }
-      }
-    },
-    "annotation": {
-      "projectType": "library",
-      "root": "libs/annotation",
-      "sourceRoot": "libs/annotation/src",
-      "prefix": "gd",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:ng-packagr",
-          "options": {
-            "tsConfig": "libs/annotation/tsconfig.lib.json",
-            "project": "libs/annotation/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "libs/annotation/tsconfig.lib.prod.json"
-            }
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/annotation/tsconfig.lib.json",
-              "libs/annotation/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/annotation/**/*"
-            ]
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "libs/annotation/src/test.ts",
-            "tsConfig": "libs/annotation/tsconfig.spec.json",
-            "karmaConfig": "libs/annotation/karma.conf.js"
-          },
-          "outputs": [
-            "coverage/libs/annotation"
-          ]
+          "outputs": ["coverage/libs/viewer"]
         }
       },
       "schematics": {
