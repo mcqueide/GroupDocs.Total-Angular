@@ -158,61 +158,61 @@
           },
           {
             "file": "libs/common-components/package.json",
-            "hash": "4572095733543048184",
+            "hash": "12365056271426662344",
             "dependencies": [
               {
+                "source": "common-components",
                 "target": "npm:@fortawesome/angular-fontawesome",
-                "source": "common-components",
                 "type": "static"
               },
               {
+                "source": "common-components",
                 "target": "npm:@fortawesome/fontawesome-svg-core",
-                "source": "common-components",
                 "type": "static"
               },
               {
+                "source": "common-components",
                 "target": "npm:@fortawesome/free-regular-svg-icons",
-                "source": "common-components",
                 "type": "static"
               },
               {
+                "source": "common-components",
                 "target": "npm:@fortawesome/free-solid-svg-icons",
-                "source": "common-components",
                 "type": "static"
               },
               {
+                "source": "common-components",
                 "target": "npm:@ngx-translate/core",
-                "source": "common-components",
                 "type": "static"
               },
               {
+                "source": "common-components",
                 "target": "npm:ng-click-outside",
-                "source": "common-components",
                 "type": "static"
               },
               {
+                "source": "common-components",
                 "target": "npm:hammerjs",
-                "source": "common-components",
                 "type": "static"
               },
               {
+                "source": "common-components",
                 "target": "npm:jquery",
-                "source": "common-components",
                 "type": "static"
               },
               {
+                "source": "common-components",
                 "target": "npm:tslib",
-                "source": "common-components",
                 "type": "static"
               },
               {
+                "source": "common-components",
                 "target": "npm:@angular/common",
-                "source": "common-components",
                 "type": "static"
               },
               {
-                "target": "npm:@angular/core",
                 "source": "common-components",
+                "target": "npm:@angular/core",
                 "type": "static"
               }
             ]
@@ -2224,6 +2224,10 @@
         "projectType": "application",
         "targets": {
           "e2e": {
+            "inputs": [
+              "default",
+              "^production"
+            ],
             "executor": "@nrwl/cypress:cypress",
             "options": {
               "cypressConfig": "apps/total-angular-e2e/cypress.json",
@@ -2998,66 +3002,66 @@
           },
           {
             "file": "libs/annotation/package.json",
-            "hash": "4190693480877004427",
+            "hash": "17518223326965689883",
             "dependencies": [
               {
+                "source": "annotation",
                 "target": "common-components",
-                "source": "annotation",
                 "type": "static"
               },
               {
+                "source": "annotation",
                 "target": "npm:@fortawesome/angular-fontawesome",
-                "source": "annotation",
                 "type": "static"
               },
               {
+                "source": "annotation",
                 "target": "npm:@fortawesome/fontawesome-svg-core",
-                "source": "annotation",
                 "type": "static"
               },
               {
+                "source": "annotation",
                 "target": "npm:@fortawesome/free-regular-svg-icons",
-                "source": "annotation",
                 "type": "static"
               },
               {
+                "source": "annotation",
                 "target": "npm:@fortawesome/free-solid-svg-icons",
-                "source": "annotation",
                 "type": "static"
               },
               {
+                "source": "annotation",
                 "target": "npm:@ngx-translate/core",
-                "source": "annotation",
                 "type": "static"
               },
               {
+                "source": "annotation",
                 "target": "npm:ng-click-outside",
-                "source": "annotation",
                 "type": "static"
               },
               {
+                "source": "annotation",
                 "target": "npm:hammerjs",
-                "source": "annotation",
                 "type": "static"
               },
               {
+                "source": "annotation",
                 "target": "npm:jquery",
-                "source": "annotation",
                 "type": "static"
               },
               {
+                "source": "annotation",
                 "target": "npm:tslib",
-                "source": "annotation",
                 "type": "static"
               },
               {
+                "source": "annotation",
                 "target": "npm:@angular/common",
-                "source": "annotation",
                 "type": "static"
               },
               {
-                "target": "npm:@angular/core",
                 "source": "annotation",
+                "target": "npm:@angular/core",
                 "type": "static"
               }
             ]
@@ -3606,71 +3610,71 @@
           },
           {
             "file": "libs/viewer/package.json",
-            "hash": "14758969862170738283",
+            "hash": "15525848876814329272",
             "dependencies": [
               {
+                "source": "viewer",
                 "target": "common-components",
-                "source": "viewer",
                 "type": "static"
               },
               {
+                "source": "viewer",
                 "target": "npm:@fortawesome/angular-fontawesome",
-                "source": "viewer",
                 "type": "static"
               },
               {
+                "source": "viewer",
                 "target": "npm:@fortawesome/fontawesome-svg-core",
-                "source": "viewer",
                 "type": "static"
               },
               {
+                "source": "viewer",
                 "target": "npm:@fortawesome/free-regular-svg-icons",
-                "source": "viewer",
                 "type": "static"
               },
               {
+                "source": "viewer",
                 "target": "npm:@fortawesome/free-solid-svg-icons",
-                "source": "viewer",
                 "type": "static"
               },
               {
+                "source": "viewer",
                 "target": "npm:@ngx-translate/core",
-                "source": "viewer",
                 "type": "static"
               },
               {
+                "source": "viewer",
                 "target": "npm:ng-click-outside",
-                "source": "viewer",
                 "type": "static"
               },
               {
+                "source": "viewer",
                 "target": "npm:hammerjs",
-                "source": "viewer",
                 "type": "static"
               },
               {
+                "source": "viewer",
                 "target": "npm:jquery",
-                "source": "viewer",
                 "type": "static"
               },
               {
+                "source": "viewer",
                 "target": "npm:smoothscroll-polyfill",
-                "source": "viewer",
                 "type": "static"
               },
               {
+                "source": "viewer",
                 "target": "npm:tslib",
-                "source": "viewer",
                 "type": "static"
               },
               {
+                "source": "viewer",
                 "target": "npm:@angular/common",
-                "source": "viewer",
                 "type": "static"
               },
               {
-                "target": "npm:@angular/core",
                 "source": "viewer",
+                "target": "npm:@angular/core",
                 "type": "static"
               }
             ]
