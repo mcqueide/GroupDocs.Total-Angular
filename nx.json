@@ -24,17 +24,14 @@
     "warnings": {
       "versionMismatch": false
     },
-    "defaultCollection": "@nrwl/angular"
+    "defaultCollection": "@nx/angular"
   },
   "defaultProject": "total-angular",
   "generators": {
-    "@nrwl/angular:application": {
-      "unitTestRunner": "karma",
+    "@nx/angular:application": {
       "e2eTestRunner": "cypress"
     },
-    "@nrwl/angular:library": {
-      "unitTestRunner": "karma"
-    }
+    "@nx/angular:library": {}
   },
   "namedInputs": {
     "default": ["{projectRoot}/**/*", "sharedGlobals"],

@@ -1,9 +1,8 @@
 # GroupDocs.Total-Angular
 
-
 ## Generate a library
 
-Run `ng generate @nrwl/angular:library myLib --publishable --prefix=gd --style=less --no-interactive` to generate a library.
+Run `ng generate @nx/angular:library myLib --publishable --prefix=gd --style=less --no-interactive` to generate a library.
 
 > You can also use any of the plugins above to generate libraries as well.
 
@@ -42,6 +41,7 @@ Run `npm run dep-graph` to see a diagram of the dependencies of your projects.
 Visit the [Nx Documentation](https://nx.dev) to learn more.
 
 ## Try to run locally
+
 ```batch
 nvm install 14.15
 nvm use 14.15.5
