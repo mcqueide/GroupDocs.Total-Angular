@@ -11,7 +11,7 @@ import {
 } from '@angular/core';
 import {FileDescription, FileUtil, PageModel} from "@groupdocs.examples.angular/common-components";
 import {ZoomService} from "@groupdocs.examples.angular/common-components";
-import * as Hammer from 'hammerjs';
+import Hammer from 'hammerjs';
 import {WindowService} from "@groupdocs.examples.angular/common-components";
 import * as jquery from 'jquery';
 import { NavigateService } from "@groupdocs.examples.angular/common-components";

@@ -9,7 +9,7 @@ import {
 } from '@angular/core';
 import {FileDescription, FileUtil} from "../file.service";
 import {ZoomService} from "../zoom.service";
-import * as Hammer from 'hammerjs';
+import Hammer from 'hammerjs';
 import {WindowService} from '../window.service';
 import * as jquery from 'jquery';
 import { NavigateService } from '../navigate.service';

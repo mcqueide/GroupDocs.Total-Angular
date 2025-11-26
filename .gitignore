@@ -45,5 +45,6 @@ Thumbs.db
 dist/**
 .angular/cache
 .nx/cache
+.nx/workspace-data
 
 notes.txt
