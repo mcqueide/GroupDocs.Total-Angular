@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ThumbnailsComponent } from './thumbnails.component';
 
@@ -6,7 +6,7 @@ describe('ThumbnailsComponent', () => {
   let component: ThumbnailsComponent;
   let fixture: ComponentFixture<ThumbnailsComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ ThumbnailsComponent ],
       schemas: [

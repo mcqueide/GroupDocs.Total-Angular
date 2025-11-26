@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowseFilesModalComponent } from './browse-files-modal.component';
 
@@ -6,7 +6,7 @@ describe('BrowseFilesModalComponent', () => {
   let component: BrowseFilesModalComponent;
   let fixture: ComponentFixture<BrowseFilesModalComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ BrowseFilesModalComponent ],
       schemas: [

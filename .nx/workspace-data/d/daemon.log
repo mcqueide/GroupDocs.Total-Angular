@@ -1,0 +1,55 @@
+[NX Daemon Server] - 2025-11-26T01:10:14.003Z - Started listening on: /tmp/26e1c7d6a52e45a8b4ee/d.sock
+[NX Daemon Server] - 2025-11-26T01:10:14.008Z - [WATCHER]: Subscribed to changes within: /home/mcqueide/repository/groupdocs/GroupDocs.Total-Angular (native)
+[NX Daemon Server] - 2025-11-26T01:10:14.012Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2025-11-26T01:10:14.012Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2025-11-26T01:10:14.014Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2025-11-26T01:10:14.016Z - [REQUEST]: Responding to the client. Shutdown initiated
+[NX Daemon Server] - 2025-11-26T01:10:14.017Z - Done responding to the client Shutdown initiated
+[NX Daemon Server] - 2025-11-26T01:10:14.017Z - Handled FORCE_SHUTDOWN. Handling time: 0. Response time: 1.
+[NX Daemon Server] - 2025-11-26T01:10:14.018Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2025-11-26T01:10:14.018Z - [WATCHER]: Stopping the watcher for /home/mcqueide/repository/groupdocs/GroupDocs.Total-Angular (sources)
+[NX Daemon Server] - 2025-11-26T01:10:14.018Z - [WATCHER]: Stopping the watcher for /home/mcqueide/repository/groupdocs/GroupDocs.Total-Angular (outputs)
+[NX Daemon Server] - 2025-11-26T01:13:39.415Z - Started listening on: /tmp/26e1c7d6a52e45a8b4ee/d.sock
+[NX Daemon Server] - 2025-11-26T01:13:39.418Z - [WATCHER]: Subscribed to changes within: /home/mcqueide/repository/groupdocs/GroupDocs.Total-Angular (native)
+[NX Daemon Server] - 2025-11-26T01:13:39.422Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2025-11-26T01:13:39.423Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2025-11-26T01:13:39.424Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2025-11-26T01:13:39.426Z - [REQUEST]: Responding to the client. Shutdown initiated
+[NX Daemon Server] - 2025-11-26T01:13:39.426Z - Done responding to the client Shutdown initiated
+[NX Daemon Server] - 2025-11-26T01:13:39.427Z - Handled FORCE_SHUTDOWN. Handling time: 1. Response time: 1.
+[NX Daemon Server] - 2025-11-26T01:13:39.428Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2025-11-26T01:13:39.428Z - [WATCHER]: Stopping the watcher for /home/mcqueide/repository/groupdocs/GroupDocs.Total-Angular (sources)
+[NX Daemon Server] - 2025-11-26T01:13:39.429Z - [WATCHER]: Stopping the watcher for /home/mcqueide/repository/groupdocs/GroupDocs.Total-Angular (outputs)
+[NX Daemon Server] - 2025-11-26T01:15:32.262Z - Started listening on: /tmp/26e1c7d6a52e45a8b4ee/d.sock
+[NX Daemon Server] - 2025-11-26T01:15:32.265Z - [WATCHER]: Subscribed to changes within: /home/mcqueide/repository/groupdocs/GroupDocs.Total-Angular (native)
+[NX Daemon Server] - 2025-11-26T01:15:32.269Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2025-11-26T01:15:32.270Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2025-11-26T01:15:32.271Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2025-11-26T01:15:32.274Z - [REQUEST]: Responding to the client. Shutdown initiated
+[NX Daemon Server] - 2025-11-26T01:15:32.274Z - Done responding to the client Shutdown initiated
+[NX Daemon Server] - 2025-11-26T01:15:32.275Z - Handled FORCE_SHUTDOWN. Handling time: 0. Response time: 1.
+[NX Daemon Server] - 2025-11-26T01:15:32.275Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2025-11-26T01:15:32.275Z - [WATCHER]: Stopping the watcher for /home/mcqueide/repository/groupdocs/GroupDocs.Total-Angular (sources)
+[NX Daemon Server] - 2025-11-26T01:15:32.276Z - [WATCHER]: Stopping the watcher for /home/mcqueide/repository/groupdocs/GroupDocs.Total-Angular (outputs)
+[NX Daemon Server] - 2025-11-26T01:16:52.514Z - Started listening on: /tmp/26e1c7d6a52e45a8b4ee/d.sock
+[NX Daemon Server] - 2025-11-26T01:16:52.516Z - [WATCHER]: Subscribed to changes within: /home/mcqueide/repository/groupdocs/GroupDocs.Total-Angular (native)
+[NX Daemon Server] - 2025-11-26T01:16:52.521Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2025-11-26T01:16:52.521Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2025-11-26T01:16:52.523Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2025-11-26T01:16:52.525Z - [REQUEST]: Responding to the client. Shutdown initiated
+[NX Daemon Server] - 2025-11-26T01:16:52.525Z - Done responding to the client Shutdown initiated
+[NX Daemon Server] - 2025-11-26T01:16:52.525Z - Handled FORCE_SHUTDOWN. Handling time: 0. Response time: 1.
+[NX Daemon Server] - 2025-11-26T01:16:52.526Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2025-11-26T01:16:52.526Z - [WATCHER]: Stopping the watcher for /home/mcqueide/repository/groupdocs/GroupDocs.Total-Angular (sources)
+[NX Daemon Server] - 2025-11-26T01:16:52.526Z - [WATCHER]: Stopping the watcher for /home/mcqueide/repository/groupdocs/GroupDocs.Total-Angular (outputs)
+[NX Daemon Server] - 2025-11-26T01:18:31.823Z - Started listening on: /tmp/26e1c7d6a52e45a8b4ee/d.sock
+[NX Daemon Server] - 2025-11-26T01:18:31.827Z - [WATCHER]: Subscribed to changes within: /home/mcqueide/repository/groupdocs/GroupDocs.Total-Angular (native)
+[NX Daemon Server] - 2025-11-26T01:18:31.830Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2025-11-26T01:18:31.831Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2025-11-26T01:18:31.833Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2025-11-26T01:18:31.835Z - [REQUEST]: Responding to the client. Shutdown initiated
+[NX Daemon Server] - 2025-11-26T01:18:31.835Z - Done responding to the client Shutdown initiated
+[NX Daemon Server] - 2025-11-26T01:18:31.835Z - Handled FORCE_SHUTDOWN. Handling time: 1. Response time: 0.
+[NX Daemon Server] - 2025-11-26T01:18:31.837Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2025-11-26T01:18:31.837Z - [WATCHER]: Stopping the watcher for /home/mcqueide/repository/groupdocs/GroupDocs.Total-Angular (sources)
+[NX Daemon Server] - 2025-11-26T01:18:31.837Z - [WATCHER]: Stopping the watcher for /home/mcqueide/repository/groupdocs/GroupDocs.Total-Angular (outputs)

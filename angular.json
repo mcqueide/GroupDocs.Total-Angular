@@ -27,7 +27,9 @@
               "apps/total-angular/src/favicon.ico",
               "apps/total-angular/src/assets"
             ],
-            "styles": ["apps/total-angular/src/styles.less"],
+            "styles": [
+              "apps/total-angular/src/styles.less"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -41,7 +43,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
@@ -59,7 +60,10 @@
                 }
               ]
             }
-          }
+          },
+          "outputs": [
+            "{options.outputPath}"
+          ]
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -85,7 +89,10 @@
               "apps/total-angular/tsconfig.app.json",
               "apps/total-angular/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**/*", "!apps/total-angular/**/*"]
+            "exclude": [
+              "**/node_modules/**/*",
+              "!apps/total-angular/**/*"
+            ]
           }
         },
         "test": {
@@ -98,7 +105,10 @@
             "styles": [],
             "scripts": [],
             "assets": []
-          }
+          },
+          "outputs": [
+            "coverage/apps/total-angular"
+          ]
         }
       }
     },
@@ -124,7 +134,10 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "apps/total-angular-e2e/tsconfig.e2e.json",
-            "exclude": ["**/node_modules/**/*", "!apps/total-angular-e2e/**/*"]
+            "exclude": [
+              "**/node_modules/**/*",
+              "!apps/total-angular-e2e/**/*"
+            ]
           }
         }
       }
@@ -136,7 +149,7 @@
       "prefix": "gd",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
             "tsConfig": "libs/viewer/tsconfig.lib.json",
             "project": "libs/viewer/ng-package.json"
@@ -154,7 +167,10 @@
               "libs/viewer/tsconfig.lib.json",
               "libs/viewer/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**/*", "!libs/viewer/**/*"]
+            "exclude": [
+              "**/node_modules/**/*",
+              "!libs/viewer/**/*"
+            ]
           }
         },
         "test": {
@@ -163,7 +179,10 @@
             "main": "libs/viewer/src/test.ts",
             "tsConfig": "libs/viewer/tsconfig.spec.json",
             "karmaConfig": "libs/viewer/karma.conf.js"
-          }
+          },
+          "outputs": [
+            "coverage/libs/viewer"
+          ]
         }
       },
       "schematics": {
@@ -179,7 +198,7 @@
       "prefix": "gd",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
             "tsConfig": "libs/common-components/tsconfig.lib.json",
             "project": "libs/common-components/ng-package.json"
@@ -197,7 +216,10 @@
               "libs/common-components/tsconfig.lib.json",
               "libs/common-components/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**/*", "!libs/common-components/**/*"]
+            "exclude": [
+              "**/node_modules/**/*",
+              "!libs/common-components/**/*"
+            ]
           }
         },
         "test": {
@@ -206,7 +228,10 @@
             "main": "libs/common-components/src/test.ts",
             "tsConfig": "libs/common-components/tsconfig.spec.json",
             "karmaConfig": "libs/common-components/karma.conf.js"
-          }
+          },
+          "outputs": [
+            "coverage/libs/common-components"
+          ]
         }
       },
       "schematics": {
@@ -222,7 +247,7 @@
       "prefix": "gd",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
             "tsConfig": "libs/annotation/tsconfig.lib.json",
             "project": "libs/annotation/ng-package.json"
@@ -240,7 +265,10 @@
               "libs/annotation/tsconfig.lib.json",
               "libs/annotation/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/annotation/**/*"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/annotation/**/*"
+            ]
           }
         },
         "test": {
@@ -249,7 +277,10 @@
             "main": "libs/annotation/src/test.ts",
             "tsConfig": "libs/annotation/tsconfig.spec.json",
             "karmaConfig": "libs/annotation/karma.conf.js"
-          }
+          },
+          "outputs": [
+            "coverage/libs/annotation"
+          ]
         }
       },
       "schematics": {

@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { UploadFileZoneComponent } from './upload-file-zone.component';
 
@@ -6,7 +6,7 @@ describe('UploadFileZoneComponent', () => {
   let component: UploadFileZoneComponent;
   let fixture: ComponentFixture<UploadFileZoneComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ UploadFileZoneComponent ],
       schemas: [

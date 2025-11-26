@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RunPresentationComponent } from './run-presentation.component';
 
@@ -6,7 +6,7 @@ describe('RunPresentationComponent', () => {
   let component: RunPresentationComponent;
   let fixture: ComponentFixture<RunPresentationComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ RunPresentationComponent ],
       schemas: [

@@ -21,7 +21,7 @@ const annotationModuleWithProviders = AnnotationModule.forRoot("http://localhost
       {path: '', component: TotalViewComponent},
       {path: 'viewer', component: ViewerAppComponent},
       {path: 'annotation', component: AnnotationAppComponent},
-    ], {initialNavigation: 'enabled'})
+    ], { initialNavigation: 'enabled', relativeLinkResolution: 'legacy' })
   ],
   providers: [
     // spread the providers returned by forRoot
