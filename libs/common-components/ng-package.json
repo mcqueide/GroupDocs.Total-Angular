@@ -1,17 +1,8 @@
 {
-  "$schema": "../node_modules/ng-packagr/ng-package.schema.json",
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
   "dest": "../../dist/libs/common-components",
   "lib": {
-    "entryFile": "src/index.ts",
-    "umdModuleIds": {
-      "@fortawesome/angular-fontawesome": "angularFontawesome",
-      "@fortawesome/free-solid-svg-icons": "freeSolidSvgIcons",
-      "@fortawesome/free-regular-svg-icons": "freeRegularSvgIcons",
-      "jquery": "jquery",
-      "ng-click-outside": "ngClickOutside",
-      "@ngx-translate/core": "ngxTranslateCore",
-      "hammerjs": "Hammer"
-    }
+    "entryFile": "src/index.ts"
   },
   "allowedNonPeerDependencies": [
     "@groupdocs.examples.angular/common-components",
