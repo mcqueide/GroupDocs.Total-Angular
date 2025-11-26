@@ -37,10 +37,10 @@ export class FormattingService {
   private readonly _formatBoldChange: Observable<boolean> = this._observerBold.asObservable();
   private _observerUnderline: Subject<boolean> = new Subject();
   private readonly _formatUnderlineChange: Observable<boolean> = this._observerUnderline.asObservable();
-  private _observerUndo: Subject<boolean> = new Subject();
-  private readonly _undo: Observable<boolean> = this._observerUndo.asObservable();
-  private _observerRedo: Subject<boolean> = new Subject();
-  private readonly _redo: Observable<boolean> = this._observerRedo.asObservable();
+  private _observerUndo: Subject<void> = new Subject();
+  private readonly _undo: Observable<void> = this._observerUndo.asObservable();
+  private _observerRedo: Subject<void> = new Subject();
+  private readonly _redo: Observable<void> = this._observerRedo.asObservable();
   private _observerItalic: Subject<boolean> = new Subject();
   private readonly _formatItalicChange: Observable<boolean> = this._observerItalic.asObservable();
   private _observerColor: Subject<string> = new Subject();
