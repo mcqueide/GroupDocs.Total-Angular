@@ -79,7 +79,7 @@ export class TextMenuComponent implements OnInit {
       for (let i = 0, len = fontElements.length; i < len; ++i) {
         if (fontElements[i].getAttribute('size') === "7") {
           fontElements[i].removeAttribute("size");
-          fontElements[i].style.fontSize = $event + "px";
+          (fontElements[i] as HTMLElement).style.fontSize = $event.value + "px";
         }
       }
     });
