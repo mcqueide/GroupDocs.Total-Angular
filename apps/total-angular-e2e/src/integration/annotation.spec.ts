@@ -2,7 +2,6 @@
 
 describe('Annotation', () => {
   beforeEach(function () {
-    cy.server();
     cy.fixture("viewerLoadConfigDefault").as('viewerLoadConfigDefault');
     cy.fixture("comparisonLoadConfigDefault").as('comparisonLoadConfigDefault');
     cy.fixture("conversionLoadConfigDefault").as('conversionLoadConfigDefault');
@@ -16,18 +15,18 @@ describe('Annotation', () => {
     cy.fixture("loadFileTreeSubFolder").as('loadFileTreeSubFolder');
     cy.fixture("loadDocumentDescriptionDefault").as('loadDocumentDescriptionDefault');
 
-    cy.route('http://localhost:8080/viewer/loadConfig', "@viewerLoadConfigDefault");
-    cy.route('http://localhost:8080/comparison/loadConfig', "@comparisonLoadConfigDefault");
-    cy.route('http://localhost:8080/conversion/loadConfig', "@conversionLoadConfigDefault");
-    cy.route('http://localhost:8080/editor/loadConfig', "@editorLoadConfigDefault");
-    cy.route('http://localhost:8080/signature/loadConfig', "@signatureLoadConfigDefault");
-    cy.route('http://localhost:8080/annotation/loadConfig', "@annotationLoadConfigDefault");
-    cy.route('http://localhost:8080/metadata/loadConfig', "@metadataLoadConfigDefault");
-    cy.route('http://localhost:8080/search/loadConfig', "@searchLoadConfigDefault");
-    cy.route('http://localhost:8080/parser/loadConfig', "@parserLoadConfigDefault");
+    cy.intercept('http://localhost:8080/viewer/loadConfig', { fixture: "viewerLoadConfigDefault" });
+    cy.intercept('http://localhost:8080/comparison/loadConfig', { fixture: "comparisonLoadConfigDefault" });
+    cy.intercept('http://localhost:8080/conversion/loadConfig', { fixture: "conversionLoadConfigDefault" });
+    cy.intercept('http://localhost:8080/editor/loadConfig', { fixture: "editorLoadConfigDefault" });
+    cy.intercept('http://localhost:8080/signature/loadConfig', { fixture: "signatureLoadConfigDefault" });
+    cy.intercept('http://localhost:8080/annotation/loadConfig', { fixture: "annotationLoadConfigDefault" });
+    cy.intercept('http://localhost:8080/metadata/loadConfig', { fixture: "metadataLoadConfigDefault" });
+    cy.intercept('http://localhost:8080/search/loadConfig', { fixture: "searchLoadConfigDefault" });
+    cy.intercept('http://localhost:8080/parser/loadConfig', { fixture: "parserLoadConfigDefault" });
 
-    cy.route('POST','http://localhost:8080/annotation/loadFileTree', "@loadFileTreeDefault");
-    cy.route('POST','http://localhost:8080/annotation/loadDocumentDescription', "@loadDocumentDescriptionDefault");
+    cy.intercept('POST','http://localhost:8080/annotation/loadFileTree', { fixture: "loadFileTreeDefault" });
+    cy.intercept('POST','http://localhost:8080/annotation/loadDocumentDescription', { fixture: "loadDocumentDescriptionDefault" });
 
   });
 
