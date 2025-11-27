@@ -49,3 +49,5 @@ dist/**
 
 notes.txt
 console*.log
+.cursor/rules/nx-rules.mdc
+.github/instructions/nx.instructions.md

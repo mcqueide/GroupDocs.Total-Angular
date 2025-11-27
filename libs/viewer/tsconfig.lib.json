@@ -7,7 +7,8 @@
     "types": [],
     "lib": ["dom", "es2018"],
     "target": "ES2022",
-    "useDefineForClassFields": false
+    "useDefineForClassFields": false,
+    "moduleResolution": "bundler"
   },
   "angularCompilerOptions": {
     "skipTemplateCodegen": true,

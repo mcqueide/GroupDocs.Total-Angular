@@ -2,13 +2,14 @@
   "name": "total-angular",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
+  "sourceRoot": "apps/total-angular/src",
+  "prefix": "total-angular",
+  "tags": [],
   "generators": {
     "@nx/workspace:component": {
       "style": "less"
     }
   },
-  "sourceRoot": "apps/total-angular/src",
-  "prefix": "total-angular",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:application",
@@ -17,17 +18,13 @@
           "base": "dist/apps/total-angular"
         },
         "index": "apps/total-angular/src/index.html",
-        "polyfills": [
-          "apps/total-angular/src/polyfills.ts"
-        ],
+        "polyfills": ["apps/total-angular/src/polyfills.ts"],
         "tsConfig": "apps/total-angular/tsconfig.app.json",
         "assets": [
           "apps/total-angular/src/favicon.ico",
           "apps/total-angular/src/assets"
         ],
-        "styles": [
-          "apps/total-angular/src/styles.less"
-        ],
+        "styles": ["apps/total-angular/src/styles.less"],
         "scripts": [],
         "extractLicenses": false,
         "sourceMap": true,
@@ -61,9 +58,7 @@
           ]
         }
       },
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "defaultConfiguration": ""
     },
     "serve": {
@@ -75,7 +70,8 @@
         "production": {
           "buildTarget": "total-angular:build:production"
         }
-      }
+      },
+      "continuous": true
     },
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
@@ -90,10 +86,7 @@
           "apps/total-angular/tsconfig.app.json",
           "apps/total-angular/tsconfig.spec.json"
         ],
-        "exclude": [
-          "**/node_modules/**/*",
-          "!apps/total-angular/**/*"
-        ]
+        "exclude": ["**/node_modules/**/*", "!apps/total-angular/**/*"]
       }
     },
     "test": {
@@ -107,10 +100,7 @@
         "scripts": [],
         "assets": []
       },
-      "outputs": [
-        "{workspaceRoot}/coverage/apps/total-angular"
-      ]
+      "outputs": ["{workspaceRoot}/coverage/apps/total-angular"]
     }
-  },
-  "tags": []
+  }
 }
