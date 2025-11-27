@@ -48,3 +48,4 @@ dist/**
 .nx/workspace-data
 
 notes.txt
+console*.log
