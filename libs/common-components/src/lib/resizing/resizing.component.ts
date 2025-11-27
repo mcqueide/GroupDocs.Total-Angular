@@ -1,8 +1,6 @@
 import {AfterViewInit, Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import * as jquery from "jquery";
+import $ from 'jquery';
 import {Utils} from "../file.service";
-
-const $ = jquery;
 
 @Component({
     selector: 'gd-resizing',

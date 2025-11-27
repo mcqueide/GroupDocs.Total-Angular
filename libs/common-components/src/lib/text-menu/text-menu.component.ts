@@ -1,12 +1,10 @@
 import {Component, EventEmitter, Input, OnInit, Output, ElementRef, Renderer2} from '@angular/core';
-import * as jquery from 'jquery';
+import $ from 'jquery';
 import {FormattingService} from "../formatting.service";
 import {OnCloseService} from "../on-close.service";
 import {Option} from "../select/select.component";
 import { ZoomService } from '../zoom.service';
 import { WindowService } from '../window.service';
-
-const $ = jquery;
 
 @Component({
     selector: 'gd-text-menu',

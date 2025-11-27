@@ -24,12 +24,10 @@ import {
 } from "./annotation-models";
 import { AnnotationComponent } from "./annotation/annotation.component";
 import { ActiveAnnotationService } from "./active-annotation.service";
-import * as jquery from 'jquery';
+import $ from 'jquery';
 import { RemoveAnnotationService } from "./remove-annotation.service";
 import { CommentAnnotationService } from "./comment-annotation.service";
 import { AnnotationConfigService } from "./annotation-config.service";
-
-const $ = jquery;
 
 @Component({
     selector: 'gd-annotation-app',

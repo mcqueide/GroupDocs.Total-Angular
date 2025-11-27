@@ -13,12 +13,10 @@ import {FileDescription, FileUtil, PageModel} from "@groupdocs.examples.angular/
 import {ZoomService} from "@groupdocs.examples.angular/common-components";
 import Hammer from 'hammerjs';
 import {WindowService} from "@groupdocs.examples.angular/common-components";
-import * as jquery from 'jquery';
+import $ from 'jquery';
 import { NavigateService } from "@groupdocs.examples.angular/common-components";
 import { Subject } from 'rxjs';
 import { Constants } from '../viewer.constants';
-
-const $ = jquery;
 
 @Component({
     selector: 'gd-run-presentation',

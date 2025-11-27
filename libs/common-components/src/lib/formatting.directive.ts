@@ -1,8 +1,7 @@
 import {Directive, HostListener, OnInit} from '@angular/core';
 import {FormattingService} from "./formatting.service";
 import {BackFormattingService} from "./back-formatting.service";
-import * as jquery from 'jquery';
-const $ = jquery;
+import $ from 'jquery';
 import {SelectionService} from './selection.service';
 
 @Directive({

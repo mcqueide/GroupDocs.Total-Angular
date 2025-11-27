@@ -11,10 +11,9 @@ import {FileDescription, FileUtil} from "../file.service";
 import {ZoomService} from "../zoom.service";
 import Hammer from 'hammerjs';
 import {WindowService} from '../window.service';
-import * as jquery from 'jquery';
+import $ from 'jquery';
 import { NavigateService } from '../navigate.service';
 
-const $ = jquery;
 
 @Component({
     selector: 'gd-document',

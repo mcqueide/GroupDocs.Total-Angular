@@ -1,10 +1,9 @@
 import {Directive, ElementRef} from '@angular/core';
 import {SearchService} from "./search.service";
 import {ZoomService} from "./zoom.service";
-import * as jquery from "jquery";
+import $ from 'jquery';
 import {Observable, Subject} from "rxjs";
 import {debounceTime, distinctUntilChanged} from "rxjs/operators";
-const $ = jquery;
 
 @Directive({
     selector: '[gdSearchable]',

@@ -13,8 +13,7 @@ import {PagePreloadService} from "./page-preload.service";
 import {ZoomService} from "./zoom.service";
 import {WindowService} from "./window.service";
 import {ViewportService} from "./viewport.service";
-import * as jquery from "jquery";
-const $ = jquery;
+import $ from 'jquery';
 
 @Directive({
     selector: '[gdScrollable]',

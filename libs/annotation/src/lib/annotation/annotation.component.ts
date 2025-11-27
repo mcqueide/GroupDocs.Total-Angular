@@ -11,9 +11,7 @@ import {ActiveAnnotationService} from "../active-annotation.service";
 import {Formatting, Utils, MenuType, ZoomService} from "@groupdocs.examples.angular/common-components";
 import {RemoveAnnotationService} from "../remove-annotation.service";
 import {CommentAnnotationService} from "../comment-annotation.service";
-import * as jquery from 'jquery';
-
-const $ = jquery;
+import $ from 'jquery';
 
 @Component({
     selector: 'gd-annotation',

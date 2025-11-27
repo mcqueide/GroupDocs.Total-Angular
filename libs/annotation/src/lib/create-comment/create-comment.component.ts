@@ -1,8 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Comment} from '../annotation-models'
-import * as jquery from 'jquery';
-
-const $ = jquery;
+import $ from 'jquery';
 
 @Component({
     selector: 'gd-create-comment',

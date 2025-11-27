@@ -1,9 +1,7 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {ExceptionMessageService} from "../exception-message.service";
 import {PasswordService} from "../password.service";
-import * as jquery from "jquery";
-
-const $ = jquery;
+import $ from 'jquery';
 
 @Component({
     selector: 'gd-password-required',

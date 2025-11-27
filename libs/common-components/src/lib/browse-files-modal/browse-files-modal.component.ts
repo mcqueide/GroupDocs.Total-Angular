@@ -1,8 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {FileModel, FileUtil} from "../file.service";
 import {UploadFilesService} from "../upload-files.service";
-import * as jquery from "jquery";
-const $ = jquery;
+import $ from 'jquery';
 
 const upload_disc = 'Disc';
 

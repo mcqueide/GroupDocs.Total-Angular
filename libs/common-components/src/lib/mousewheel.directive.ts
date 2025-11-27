@@ -3,8 +3,7 @@ import {
   EventEmitter,
   HostListener,
   Output} from '@angular/core';
-import * as jquery from "jquery";
-const $ = jquery;
+import $ from 'jquery';
 
 @Directive({
     selector: '[gdMouseWheel]',
